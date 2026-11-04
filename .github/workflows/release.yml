@@ -1,0 +1,110 @@
+# Builds a plugin from this repo's source and publishes it as a GitHub release.
+# Push a tag named <plugin>-v<version>, e.g. potentialbreaks-v1.1.1, and this does the rest:
+# build -> host test (ASan) -> armv7 build -> release.py zip -> catalog check -> release with the zip attached.
+name: Release
+
+on:
+  push:
+    tags: ['potentialbreaks-v*', 'potentialpatina-v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to (re)build, e.g. potentialbreaks-v1.1.1
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  KIT_REPO: https://github.com/sd88me/mpc-vst-plugins
+  KIT_REF: bf1054ce08460cf42b10f96985e73141d64a71af   # pinned: the version the releases were tested with
+  ZIG_VERSION: 0.17.0
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Work out plugin and version from the tag
+        id: t
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          PLUGIN="${TAG%-v*}"; VERSION="${TAG##*-v}"
+          case "$PLUGIN" in
+            potentialbreaks) NAME=PotentialBreaks; SRC="src/breaks.c"; INC="-I src"
+              ABOUT="Drum-break slicer: a random break from your library on 16 pads, chopped and tempo-matched." ;;
+            potentialpatina) NAME=PotentialPatina; SRC="src/patina.c"; INC=""
+              ABOUT="Retro-colour insert effect: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box." ;;
+            *) echo "unknown plugin $PLUGIN"; exit 1 ;;
+          esac
+          { echo "tag=$TAG"; echo "plugin=$PLUGIN"; echo "version=$VERSION"; echo "name=$NAME"
+            echo "src=$SRC"; echo "inc=$INC"; echo "about=$ABOUT"; } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.t.outputs.tag }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Get the build kit (pinned) and tools
+        run: |
+          git clone -q "$KIT_REPO" kit && git -C kit checkout -q "$KIT_REF"
+          git -C kit apply ../shared/mpc-vst-plugins-label-fit.patch
+          pip install "ziglang==$ZIG_VERSION" pillow
+          sudo apt-get update -qq && sudo apt-get install -y -qq gcc
+
+      - name: Check the version in vst.json matches the tag
+        run: |
+          python3 - <<PY
+          import json
+          v = json.load(open("plugins/${{ steps.t.outputs.plugin }}/vst/vst.json"))["version"]
+          want = "${{ steps.t.outputs.version }}".split(".")
+          expect = int(want[0]) * 1000 + int(want[1]) * 100 + int(want[2])
+          assert v == expect, f"vst.json version {v} != tag {expect}"
+          PY
+
+      - name: Skin, params and host test
+        env:
+          SHADOW_TITLE_FONT: ${{ github.workspace }}/kit/tools/html_art/fonts/TitilliumWeb-SemiBold.ttf
+        run: |
+          P=plugins/${{ steps.t.outputs.plugin }}
+          mkdir -p $P/vst/build
+          gcc -O2 -I kit/tools/vendor/force-shadow/tools -o $P/vst/build/shadow_art kit/tools/shadow_art.c -lm
+          python3 kit/tools/gen_vst.py $P/vst/vst.json
+          bash kit/tools/test_port.sh $P/vst/vst.json
+
+      - name: Build for the MPC (Gen1, armv7)
+        run: |
+          K=$GITHUB_WORKSPACE/kit
+          cd plugins/${{ steps.t.outputs.plugin }}
+          python3 -m ziglang cc -target arm-linux-gnueabihf.2.31 -mcpu=cortex_a9 -mfpu=neon -O2 -fPIC -shared \
+            -fvisibility=hidden -std=gnu11 -ffast-math ${{ steps.t.outputs.inc }} -I vst/build -I $K/wrapper \
+            ${{ steps.t.outputs.src }} $K/wrapper/vst2_wrap.c -lm -lpthread -Wl,--no-undefined -Wl,-s \
+            -o vst/build/${{ steps.t.outputs.plugin }}.so
+          sha256sum vst/build/${{ steps.t.outputs.plugin }}.so
+
+      - name: Package and check
+        run: |
+          K=$GITHUB_WORKSPACE/kit
+          cd plugins/${{ steps.t.outputs.plugin }}
+          python3 $K/tools/release.py --so vst/build/${{ steps.t.outputs.plugin }}.so \
+            --skin "vst/build/skin/PotentialBreaks - VST - ${{ steps.t.outputs.name }}" \
+            --entry vst/build/pluginlist-entry.xml --version ${{ steps.t.outputs.version }} \
+            --id ${{ steps.t.outputs.plugin }} --repo ${{ github.repository }} --license MIT \
+            --about "${{ steps.t.outputs.about }}" -o $GITHUB_WORKSPACE/dist
+          python3 $K/tools/catalog_check.py $GITHUB_WORKSPACE/dist/*.zip --catalog
+          cd $GITHUB_WORKSPACE/dist && sha256sum *.zip | tee SHA256SUMS
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=${{ steps.t.outputs.tag }}
+          NOTES=.github/release-notes/$TAG.md
+          [ -f "$NOTES" ] || NOTES=/dev/null
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.zip --clobber
+          else
+            gh release create "$TAG" dist/*.zip --title "${{ steps.t.outputs.name }} ${{ steps.t.outputs.version }}" --notes-file "$NOTES"
+          fi
