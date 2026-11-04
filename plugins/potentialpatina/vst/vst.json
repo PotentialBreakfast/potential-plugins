@@ -1,0 +1,23 @@
+{
+ "name": "PotentialPatina",
+ "vendor": "PotentialBreaks",
+ "uid": "PbPt",
+ "version": 1002,
+ "so": "potentialpatina.so",
+ "params": "params.json",
+ "layout": "layout.conf",
+ "effect": true,
+ "presets": "presets.json",
+ "build": {
+  "root": "..",
+  "sources": [
+   "src/patina.c"
+  ],
+  "cflags": [
+   "-ffast-math"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ }
+}

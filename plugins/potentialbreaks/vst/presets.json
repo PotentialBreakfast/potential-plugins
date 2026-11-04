@@ -1,0 +1,59 @@
+{
+ "presets": [
+  {
+   "name": "Breaks",
+   "values": {
+    "chop": "Grid 16",
+    "bars": "2 Bars",
+    "tempo_mode": "Re-pitch",
+    "pitch": 0,
+    "choke": "On",
+    "volume": 0
+   }
+  },
+  {
+   "name": "Chopped Hits",
+   "values": {
+    "chop": "Hits",
+    "bars": "1 Bar",
+    "tempo_mode": "Stretch",
+    "pitch": 0,
+    "choke": "On",
+    "volume": 0
+   }
+  },
+  {
+   "name": "8 Chops",
+   "values": {
+    "chop": "Grid 8",
+    "bars": "1 Bar",
+    "tempo_mode": "Re-pitch",
+    "pitch": 0,
+    "choke": "On",
+    "volume": 0
+   }
+  },
+  {
+   "name": "Long Loop",
+   "values": {
+    "chop": "Grid 16",
+    "bars": "4 Bars",
+    "tempo_mode": "Re-pitch",
+    "pitch": 0,
+    "choke": "Off",
+    "volume": 0
+   }
+  },
+  {
+   "name": "Slowed Down",
+   "values": {
+    "chop": "Grid 16",
+    "bars": "2 Bars",
+    "tempo_mode": "Stretch",
+    "pitch": -5,
+    "choke": "On",
+    "volume": 0
+   }
+  }
+ ]
+}

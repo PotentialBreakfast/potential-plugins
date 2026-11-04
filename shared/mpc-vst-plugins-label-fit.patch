@@ -1,0 +1,19 @@
+diff --git a/tools/shadow_skin.py b/tools/shadow_skin.py
+index 3fcf899..e49a71e 100644
+--- a/tools/shadow_skin.py
++++ b/tools/shadow_skin.py
+@@ -1378,8 +1378,13 @@ def build(layout_path, params, skin_dir, art_bin, png_from_ppm):
+         for path, w_px, h_px, text, color in label_overlays:
+             im = Image.open(path).convert("RGB")
+             dr = ImageDraw.Draw(im)
+-            font = ImageFont.truetype(TITLE_FONT, max(10, int(h_px * 0.42)))
++            fs = max(10, min(int(h_px * 0.42), 40))
++            font = ImageFont.truetype(TITLE_FONT, fs)
+             tb = dr.textbbox((0, 0), text, font=font)
++            while fs > 10 and tb[2] - tb[0] > w_px - 20:   # shrink to fit the width
++                fs -= 1
++                font = ImageFont.truetype(TITLE_FONT, fs)
++                tb = dr.textbbox((0, 0), text, font=font)
+             tw, th = tb[2] - tb[0], tb[3] - tb[1]
+             dr.text(((w_px - tw) / 2 - tb[0], (h_px - th) / 2 - tb[1]), text, font=font, fill="#" + color)
+             im.save(path)

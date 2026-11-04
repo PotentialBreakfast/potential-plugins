@@ -1,0 +1,175 @@
+{
+ "name": "PotentialPatina",
+ "params": [
+  {
+   "key": "magnitude",
+   "name": "Magnitude",
+   "min": 0,
+   "max": 100,
+   "default": 100,
+   "unit": "%"
+  },
+  {
+   "key": "mix",
+   "name": "Mix",
+   "min": 0,
+   "max": 100,
+   "default": 85,
+   "unit": "%"
+  },
+  {
+   "key": "output",
+   "name": "Output",
+   "min": -18,
+   "max": 6,
+   "default": 0,
+   "unit": "dB"
+  },
+  {
+   "key": "noise_on",
+   "name": "Noise",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 1
+  },
+  {
+   "key": "noise_type",
+   "name": "Noise Type",
+   "options": [
+    "Vinyl",
+    "Tape",
+    "Hum"
+   ],
+   "default": 0
+  },
+  {
+   "key": "noise_amt",
+   "name": "Noise Amount",
+   "min": 0,
+   "max": 100,
+   "default": 19,
+   "unit": "%"
+  },
+  {
+   "key": "wobble_on",
+   "name": "Wobble",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 1
+  },
+  {
+   "key": "wobble_amt",
+   "name": "Wobble Amount",
+   "min": 0,
+   "max": 100,
+   "default": 18,
+   "unit": "%"
+  },
+  {
+   "key": "wobble_rate",
+   "name": "Wobble Rate",
+   "min": 0,
+   "max": 100,
+   "default": 30,
+   "unit": "%"
+  },
+  {
+   "key": "drive_on",
+   "name": "Drive",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 1
+  },
+  {
+   "key": "drive_type",
+   "name": "Drive Type",
+   "options": [
+    "Tape",
+    "Tube",
+    "Cassette"
+   ],
+   "default": 0
+  },
+  {
+   "key": "drive_amt",
+   "name": "Drive Amount",
+   "min": 0,
+   "max": 100,
+   "default": 23,
+   "unit": "%"
+  },
+  {
+   "key": "digital_on",
+   "name": "Digital",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "digital_bits",
+   "name": "Bits",
+   "min": 4,
+   "max": 16,
+   "default": 12,
+   "display": "int"
+  },
+  {
+   "key": "digital_rate",
+   "name": "Sample Rate",
+   "min": 4,
+   "max": 44,
+   "default": 26,
+   "unit": "kHz"
+  },
+  {
+   "key": "tone_on",
+   "name": "Tone",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 1
+  },
+  {
+   "key": "tone_tilt",
+   "name": "Tilt",
+   "min": -100,
+   "max": 100,
+   "default": -12,
+   "unit": "%"
+  },
+  {
+   "key": "space_on",
+   "name": "Space",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 0
+  },
+  {
+   "key": "space_amt",
+   "name": "Space Amount",
+   "min": 0,
+   "max": 100,
+   "default": 18,
+   "unit": "%"
+  },
+  {
+   "key": "space_size",
+   "name": "Space Size",
+   "min": 0,
+   "max": 100,
+   "default": 50,
+   "unit": "%"
+  }
+ ]
+}

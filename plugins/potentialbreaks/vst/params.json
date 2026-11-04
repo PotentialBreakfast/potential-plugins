@@ -1,0 +1,160 @@
+{
+ "name": "PotentialBreaks",
+ "params": [
+  {
+   "key": "random",
+   "name": "Random Break",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "prev",
+   "name": "Previous Break",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "next",
+   "name": "Next Break",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "lib_next",
+   "name": "Next Library",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "lib_name",
+   "name": "Library",
+   "display": "string",
+   "default": 0,
+   "min": 0,
+   "max": 1
+  },
+  {
+   "key": "break_name",
+   "name": "Break",
+   "display": "string",
+   "default": 0,
+   "min": 0,
+   "max": 1
+  },
+  {
+   "key": "info",
+   "name": "Info",
+   "display": "string",
+   "default": 0,
+   "min": 0,
+   "max": 1
+  },
+  {
+   "key": "status",
+   "name": "Status",
+   "display": "string",
+   "default": 0,
+   "min": 0,
+   "max": 1
+  },
+  {
+   "key": "chop",
+   "name": "Chop",
+   "options": [
+    "Grid 8",
+    "Grid 16",
+    "Hits"
+   ],
+   "default": 1
+  },
+  {
+   "key": "bars",
+   "name": "Loop Bars",
+   "options": [
+    "1 Bar",
+    "2 Bars",
+    "4 Bars"
+   ],
+   "default": 1
+  },
+  {
+   "key": "tempo_mode",
+   "name": "Tempo",
+   "options": [
+    "Re-pitch",
+    "Stretch"
+   ],
+   "default": 0
+  },
+  {
+   "key": "pitch",
+   "name": "Pitch",
+   "min": -12,
+   "max": 12,
+   "default": 0,
+   "unit": "st",
+   "display": "int"
+  },
+  {
+   "key": "choke",
+   "name": "Choke",
+   "options": [
+    "Off",
+    "On"
+   ],
+   "default": 1
+  },
+  {
+   "key": "volume",
+   "name": "Volume",
+   "min": -24,
+   "max": 6,
+   "default": 0,
+   "unit": "dB"
+  },
+  {
+   "key": "shuffle",
+   "name": "Shuffle Slices",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "order",
+   "name": "Slices In Order",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "learn",
+   "name": "Learn Pad 1",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "play_loop",
+   "name": "Play Whole Loop",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "save_groove",
+   "name": "Save Groove MIDI",
+   "type": "trigger",
+   "momentary": true
+  },
+  {
+   "key": "base_note",
+   "name": "Pad 1 Note",
+   "min": 0,
+   "max": 111,
+   "default": 36,
+   "display": "int"
+  },
+  {
+   "key": "rescan",
+   "name": "Rescan Folders",
+   "type": "trigger",
+   "momentary": true
+  }
+ ]
+}
