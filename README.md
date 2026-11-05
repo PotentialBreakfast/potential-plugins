@@ -11,6 +11,8 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 
 On the way: **PotentialWax**, a sampler for chopping melodic loops and whole songs.
 
+Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, and one-click "save the last 60 seconds".
+
 | PotentialBreaks | PotentialPatina |
 |---|---|
 | ![PotentialBreaks running on an MPC One](docs/images/potentialbreaks.png) | ![PotentialPatina running on an MPC One](docs/images/potentialpatina.png) |
