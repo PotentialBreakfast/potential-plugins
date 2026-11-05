@@ -2,7 +2,7 @@
 
 **Dig, chop, play.** Tap one button for a random drum break from your own library. It's sliced across 16 pads and matched to your project's tempo, ready to flip.
 
-![PotentialBreaks](../../docs/images/potentialbreaks.png)
+![PotentialBreaks running on an MPC One](../../docs/images/potentialbreaks.png)
 
 *Instrument plugin · MPC OS 3.x · Gen1 (32-bit) · v1.1.1*
 
@@ -50,7 +50,7 @@ The pads play **MIDI notes 36–51** (and 0–15). If pad 1 doesn't play the fir
 
 ## Install
 
-See the [main page](../../README.md#install). Download `PotentialBreaks-<version>-mpc-armv7.zip` from [Releases](../../releases).
+See the [step-by-step install guide](../../INSTALL-GUIDE.md). Problems? Check the [FAQ](../../FAQ.md). Download `PotentialBreaks-<version>-mpc-armv7.zip` from [Releases](../../releases).
 
 ## Build it yourself
 

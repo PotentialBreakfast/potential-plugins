@@ -11,7 +11,11 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 
 On the way: **PotentialWax**, a sampler for chopping melodic loops and whole songs.
 
-![PotentialBreaks on the MPC touchscreen](docs/images/potentialbreaks.png)
+| PotentialBreaks | PotentialPatina |
+|---|---|
+| ![PotentialBreaks running on an MPC One](docs/images/potentialbreaks.png) | ![PotentialPatina running on an MPC One](docs/images/potentialpatina.png) |
+
+*Real screenshots from an MPC One.*
 
 ---
 
@@ -30,21 +34,15 @@ The **Should work on** row is untested: these plugins have only been tried on on
 
 ## Install
 
-Pick a plugin from [**Releases**](../../releases) and download its `-mpc-armv7.zip`.
+**👉 [Step-by-step install guide](INSTALL-GUIDE.md)**: start here if it's your first plugin.
 
-**The easy way:** install it with the [Open MPC](https://open-mpc.github.io/) installer app, which also lets you remove it again later.
+The short version:
+1. Download the `-mpc-armv7.zip` from [**Releases**](../../releases) and leave it zipped.
+2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
+3. **Save your project first.** Installing restarts the MPC app.
+4. Find **PotentialBreaks** in the plugin (instrument) list. **PotentialPatina** is an **insert effect**.
 
-**Over SSH** (if you have root SSH access to your MPC):
-```
-scp PotentialBreaks-1.1.1-mpc-armv7.zip root@<your-mpc-ip>:/tmp/
-ssh root@<your-mpc-ip>
-cd /tmp && unzip -o PotentialBreaks-1.1.1-mpc-armv7.zip
-sh PotentialBreaks-1.1.1/install.sh -t /media/<your-drive>/Synths
-```
-- **Save your project first.** The installer restarts the MPC.
-- It backs up the MPC's settings before changing anything, and `uninstall.sh` removes the plugin cleanly.
-- `INSTALL.md` inside each zip has the full steps, including a manual install.
-- Unzip **on the MPC**, not on Windows. Windows unzipping loses the permissions the installer needs.
+Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
 ---
 

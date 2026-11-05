@@ -2,7 +2,7 @@
 
 **Instant character.** A retro-colour box for any track: vinyl crackle, tape hiss and wobble, warm drive, bit-crushing, tone and a small room, all set with one big **MAGNITUDE** knob.
 
-![PotentialPatina](../../docs/images/potentialpatina.png)
+![PotentialPatina running on an MPC One (Dusty Vinyl preset)](../../docs/images/potentialpatina.png)
 
 *Insert effect · MPC OS 3.x · Gen1 (32-bit) · v1.0.2*
 
@@ -37,7 +37,7 @@ Add it as an **insert effect** on a track, program, pad or bus. It won't be in t
 
 ## Install
 
-See the [main page](../../README.md#install). Download `PotentialPatina-<version>-mpc-armv7.zip` from [Releases](../../releases).
+See the [step-by-step install guide](../../INSTALL-GUIDE.md). Problems? Check the [FAQ](../../FAQ.md). Download `PotentialPatina-<version>-mpc-armv7.zip` from [Releases](../../releases).
 
 ## Build it yourself
 
