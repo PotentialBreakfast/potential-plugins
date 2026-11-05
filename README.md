@@ -1,29 +1,31 @@
 # Potential Plugins
 
-> **📦 Each plugin now has its own home.** New releases, issues and ideas go to:
-> - **[PotentialBreaks](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks)**: drum-break slicer
-> - **[PotentialPatina](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina)**: retro-colour insert effect
->
-> This repo stays up so older links keep working, but it won't get updates.
-
 Free plugins for **Akai MPC standalone hardware**, made by **PotentialBreaks** for my own beat-making and shared for anyone who wants them.
 
 They run inside the MPC like its own instruments and effects. Each one has its own touchscreen page, works with Q-Links and saves with your project, with no computer needed while you play.
 
-| Plugin | What it is | Latest |
-|---|---|---|
-| [**PotentialBreaks**](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks) | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo | 1.1.1 |
-| [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Retro-colour insert effect: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box | 1.0.2 |
+**Each plugin has its own page with downloads, install steps and its FAQ. Click a name below.**
 
-On the way: **PotentialWax**, a sampler for chopping melodic loops and whole songs.
+| Plugin | Type | What it is |
+|---|---|---|
+| [**PotentialBreaks**](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks) | Instrument | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo |
+| [**PotentialWax**](https://github.com/PotentialBreakfast/mpc-vst-potentialwax) | Instrument | Melodic sampler: chop loops and whole songs onto pads, key and tempo matched |
+| [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Insert effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box |
+| [**PotentialPunch**](https://github.com/PotentialBreakfast/mpc-vst-potentialpunch) | Insert effect | Transient shaper: more or less attack and sustain on drums, with presets |
+| [**PotentialHeat**](https://github.com/PotentialBreakfast/mpc-vst-potentialheat) | Insert effect | Soft clipper and bus saturator: warmth and loudness without harsh peaks, with presets |
+| [**PotentialNoise**](https://github.com/PotentialBreakfast/mpc-vst-potentialnoise) | Insert effect | Calibrated pink-noise reference for balancing a mix |
+
+Punch and Heat are made to work together: Punch shapes the hit, Heat catches the peaks.
 
 Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, and one-click "save the last 60 seconds".
 
-| PotentialBreaks | PotentialPatina |
-|---|---|
-| ![PotentialBreaks running on an MPC One](docs/images/potentialbreaks.png) | ![PotentialPatina running on an MPC One](docs/images/potentialpatina.png) |
+| PotentialBreaks | PotentialWax | PotentialPatina |
+|---|---|---|
+| ![PotentialBreaks on an MPC One](docs/images/potentialbreaks.png) | ![PotentialWax on an MPC One](docs/images/potentialwax.png) | ![PotentialPatina on an MPC One](docs/images/potentialpatina.png) |
+| **PotentialPunch** | **PotentialHeat** | **PotentialNoise** |
+| ![PotentialPunch on an MPC One](docs/images/potentialpunch.png) | ![PotentialHeat on an MPC One](docs/images/potentialheat.png) | ![PotentialNoise on an MPC One](docs/images/potentialnoise.png) |
 
-*Real screenshots from an MPC One.*
+*Screenshots from an MPC One.*
 
 ---
 
@@ -45,10 +47,10 @@ The **Should work on** row is untested: these plugins have only been tried on on
 **👉 [Step-by-step install guide](INSTALL-GUIDE.md)**: start here if it's your first plugin.
 
 The short version:
-1. Download the `-mpc-armv7.zip` from [**Releases**](../../releases) and leave it zipped.
+1. Open the plugin's page (table above), download its `-mpc-armv7.zip` from **Releases**, and leave it zipped.
 2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
 3. **Save your project first.** Installing restarts the MPC app.
-4. Find **PotentialBreaks** in the plugin (instrument) list. **PotentialPatina** is an **insert effect**.
+4. Instruments (Breaks, Wax) are in the plugin instrument list. The effects (Patina, Punch, Heat, Noise) are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
@@ -61,7 +63,7 @@ I'd rather you know these up front:
 - **Made by one person, tested on one MPC.** They work well for me, but you may hit something I haven't. Please tell me if you do.
 - **Gen1 only for now.** There's no build for Gen2 machines yet.
 - **Plugins must be allowed to run on your MPC.** Stock firmware doesn't load third-party plugins until it has been set up for them (see [Open MPC](https://open-mpc.github.io/)). After a firmware update, you may have to redo that setup.
-- **Each plugin's page lists its own limits.** See [PotentialBreaks](plugins/potentialbreaks/README.md#limitations) and [PotentialPatina](plugins/potentialpatina/README.md#limitations).
+- **Each plugin's page lists its own limits.**
 - **No warranty.** These are free and come as they are. Back up your projects. I can't be responsible for lost work.
 
 ---
