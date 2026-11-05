@@ -1,13 +1,19 @@
 # Potential Plugins
 
+> **📦 Each plugin now has its own home.** New releases, issues and ideas go to:
+> - **[PotentialBreaks](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks)**: drum-break slicer
+> - **[PotentialPatina](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina)**: retro-colour insert effect
+>
+> This repo stays up so older links keep working, but it won't get updates.
+
 Free plugins for **Akai MPC standalone hardware**, made by **PotentialBreaks** for my own beat-making and shared for anyone who wants them.
 
 They run inside the MPC like its own instruments and effects. Each one has its own touchscreen page, works with Q-Links and saves with your project, with no computer needed while you play.
 
 | Plugin | What it is | Latest |
 |---|---|---|
-| [**PotentialBreaks**](plugins/potentialbreaks/README.md) | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo | 1.1.1 |
-| [**PotentialPatina**](plugins/potentialpatina/README.md) | Retro-colour insert effect: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box | 1.0.2 |
+| [**PotentialBreaks**](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks) | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo | 1.1.1 |
+| [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Retro-colour insert effect: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box | 1.0.2 |
 
 On the way: **PotentialWax**, a sampler for chopping melodic loops and whole songs.
 
