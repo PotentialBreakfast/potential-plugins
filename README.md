@@ -13,19 +13,22 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 | [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Insert effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box |
 | [**PotentialPunch**](https://github.com/PotentialBreakfast/mpc-vst-potentialpunch) | Insert effect | Transient shaper: more or less attack and sustain on drums, with presets |
 | [**PotentialHeat**](https://github.com/PotentialBreakfast/mpc-vst-potentialheat) | Insert effect | Soft clipper and bus saturator: warmth and loudness without harsh peaks, with presets |
-| [**PotentialNoise**](https://github.com/PotentialBreakfast/mpc-vst-potentialnoise) | Insert effect | Calibrated pink-noise reference for balancing a mix |
+| [**PotentialWarp**](https://github.com/PotentialBreakfast/mpc-vst-potentialwarp) | Insert effect | Tempo-locked mangler: half time, tape stop, stutter, reverse and gates, with swing and triplets |
+| [**PotentialNoise**](https://github.com/PotentialBreakfast/mpc-vst-potentialnoise) | Instrument (mixing tool) | Calibrated pink-noise reference for balancing a mix, with test tones and a speaker check |
 
 Punch and Heat are made to work together: Punch shapes the hit, Heat catches the peaks.
 
-Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, and one-click "save the last 60 seconds".
+Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows and Mac: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, and one-click "save the last 60 seconds", plus one-tap plugin updates.
 
 | PotentialBreaks | PotentialWax | PotentialPatina |
 |---|---|---|
 | ![PotentialBreaks on an MPC One](docs/images/potentialbreaks.png) | ![PotentialWax on an MPC One](docs/images/potentialwax.png) | ![PotentialPatina on an MPC One](docs/images/potentialpatina.png) |
 | **PotentialPunch** | **PotentialHeat** | **PotentialNoise** |
 | ![PotentialPunch on an MPC One](docs/images/potentialpunch.png) | ![PotentialHeat on an MPC One](docs/images/potentialheat.png) | ![PotentialNoise on an MPC One](docs/images/potentialnoise.png) |
+| **PotentialWarp** | | |
+| ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | | |
 
-*Screenshots from an MPC One.*
+*All in the Print Plate look. Every plugin also has Night Rack and Colour Block, switched on its SETTINGS page.*
 
 ---
 
@@ -50,7 +53,7 @@ The short version:
 1. Open the plugin's page (table above), download its `-mpc-armv7.zip` from **Releases**, and leave it zipped.
 2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
 3. **Save your project first.** Installing restarts the MPC app.
-4. Instruments (Breaks, Wax) are in the plugin instrument list. The effects (Patina, Punch, Heat, Noise) are **insert effects**.
+4. Breaks, Wax and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat and Warp are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
