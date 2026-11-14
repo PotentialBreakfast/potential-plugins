@@ -10,6 +10,7 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 |---|---|---|
 | [**PotentialBreaks**](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks) | Instrument | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo |
 | [**PotentialWax**](https://github.com/PotentialBreakfast/mpc-vst-potentialwax) | Instrument | Melodic sampler: chop loops and whole songs onto pads, key and tempo matched |
+| [**PotentialCrates**](https://github.com/PotentialBreakfast/mpc-vst-potentialcrates) | Instrument | Record digger: one-tap crates and ROLL dice find records on Discogs and stream them into your track (needs a network connection) |
 | [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Insert effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box |
 | [**PotentialPunch**](https://github.com/PotentialBreakfast/mpc-vst-potentialpunch) | Insert effect | Transient shaper: more or less attack and sustain on drums, with presets |
 | [**PotentialHeat**](https://github.com/PotentialBreakfast/mpc-vst-potentialheat) | Insert effect | Soft clipper and bus saturator: warmth and loudness without harsh peaks, with presets |
@@ -25,8 +26,8 @@ Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, 
 | ![PotentialBreaks on an MPC One](docs/images/potentialbreaks.png) | ![PotentialWax on an MPC One](docs/images/potentialwax.png) | ![PotentialPatina on an MPC One](docs/images/potentialpatina.png) |
 | **PotentialPunch** | **PotentialHeat** | **PotentialNoise** |
 | ![PotentialPunch on an MPC One](docs/images/potentialpunch.png) | ![PotentialHeat on an MPC One](docs/images/potentialheat.png) | ![PotentialNoise on an MPC One](docs/images/potentialnoise.png) |
-| **PotentialWarp** | | |
-| ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | | |
+| **PotentialWarp** | **PotentialCrates** | |
+| ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | ![PotentialCrates on an MPC One](docs/images/potentialcrates.png) | |
 
 *All in the Print Plate look. Every plugin also has Night Rack and Colour Block, switched on its SETTINGS page.*
 
@@ -53,7 +54,7 @@ The short version:
 1. Open the plugin's page (table above), download its `-mpc-armv7.zip` from **Releases**, and leave it zipped.
 2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
 3. **Save your project first.** Installing restarts the MPC app.
-4. Breaks, Wax and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat and Warp are **insert effects**.
+4. Breaks, Wax, Crates and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat and Warp are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
@@ -86,6 +87,7 @@ You don't need to be technical. "The PITCH knob does nothing on my Live II" is a
 ## Credits
 
 - Built on **[mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plugins)** by sd88me (MIT), the open kit that makes MPC plugins possible: the plugin wrapper, skin builder and installer.
+- PotentialCrates is a fork of **[Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger)** by sd88me, with its streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream) (both MIT).
 - Audio file reading by **[dr_libs](https://github.com/mackron/dr_libs)** (dr_wav and dr_flac) by David Reid (public domain / MIT-0).
 - The look matches the dark theme I made for sd88me's Lucky Dip.
 - Made with help from Claude (Anthropic).
