@@ -4,6 +4,8 @@ Free plugins for **Akai MPC standalone hardware**, made by **PotentialBreaks** f
 
 They run inside the MPC like its own instruments and effects. Each one has its own touchscreen page, works with Q-Links and saves with your project, with no computer needed while you play.
 
+**📖 [The PotentialSuite manual](MANUAL.md)** ([PDF](PotentialSuite-Manual.pdf)): every plugin, the FX chains and their load orders, USER presets, and a developer reference at the back. Each plugin also has a **MANUAL** page on the MPC's screen.
+
 **Each plugin has its own page with downloads, install steps and its FAQ. Click a name below.**
 
 | Plugin | Type | What it is |
@@ -52,6 +54,8 @@ Four ready-made chains. Put the plugins on a track's inserts in the order shown,
 
 Dusty Loop doesn't use Punch. Every preset is a starting point, so tweak from there.
 
+**Chains of your own:** Patina, Punch, Heat, Grit and Bleed each have a **USER** page with 8 slots. Tap **SAVE**, then a slot, in each plugin, using the same slot number. To bring the chain back, add the plugins in the same order and tap that slot in each. The [manual](MANUAL.md#6-working-together-fx-chains) has the step-by-step.
+
 Rules of thumb:
 - **Punch early**, so the hits are shaped before compression, crushing or tape.
 - **Bleed before Patina**, so the bleed is aged with the sound instead of pasted on top.
@@ -63,12 +67,11 @@ Rules of thumb:
 
 | | |
 |---|---|
-| **Tested on** | MPC One (first generation) with HAKAI 3.10 firmware |
-| **Should work on** | Other first-generation (Gen1, 32-bit) standalone MPCs running **MPC OS 3.x**: One, Live, Live II, X |
-| **Not yet** | Gen2 hardware (MPC One+, Live III, Key 37, XL and others): no build yet. **MPC OS 2.x**: not supported |
-| **You need** | A way to install third-party plugins on your MPC (see below) |
+| **Tested on** | MPC One (Gen1) on HAKAI 3.10 and on MPC OS 3.10.1 with Akai's plugin folder. PotentialWax also on an MPC Live; PotentialPatina, PotentialPunch and PotentialWax also on an MPC Key 37 (MPC OS 3.10.1) |
+| **Should work on** | Any standalone MPC on **MPC OS 3.10.1 or later**, 32-bit and 64-bit. Also Gen1 MPCs on older MPC OS 3.x with the community set-up |
+| **Not supported** | **MPC OS 2.x** |
 
-The **Should work on** row is untested: these plugins have only been tried on one MPC so far. If you try one on another model, please [tell me how it went](../../issues/new/choose). That's how this table gets filled in.
+The **Should work on** row is untested: most of these plugins have only been tried on a few MPCs so far. If you try one on another model, please [tell me how it went](../../issues/new/choose). That's how this table gets filled in.
 
 ---
 
@@ -76,10 +79,10 @@ The **Should work on** row is untested: these plugins have only been tried on on
 
 **👉 [Step-by-step install guide](INSTALL-GUIDE.md)**: start here if it's your first plugin.
 
-The short version:
-1. Open the plugin's page (table above), download its `-mpc-armv7.zip` from **Releases**, and leave it zipped.
-2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
-3. **Save your project first.** Installing restarts the MPC app.
+The short version (the [manual](MANUAL.md#2-getting-started) has all three ways):
+1. **MPC OS 3.10.1 or later:** open the plugin's page (table above), download its `-akai-vst2.zip` from **Releases** and unzip it. On the MPC turn on **Preferences → Enhancements (Beta) → Enable Enhancements** and **External Plugin Support**, copy the plugin's folder into **VST2 Plugins** at the top of a drive, and restart.
+2. **Or with [MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools):** the Plugins tab installs and updates all ten in one tap.
+3. **Older MPC OS 3.x (Gen1):** download the `-mpc-armv7.zip` and install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/). Save your project first.
 4. Breaks, Wax, Crates and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat, Warp, Grit and Bleed are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
@@ -90,9 +93,9 @@ Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
 I'd rather you know these up front:
 
-- **Made by one person, tested on one MPC.** They work well for me, but you may hit something I haven't. Please tell me if you do.
-- **Gen1 only for now.** There's no build for Gen2 machines yet.
-- **Plugins must be allowed to run on your MPC.** Stock firmware doesn't load third-party plugins until it has been set up for them (see [Open MPC](https://open-mpc.github.io/)). After a firmware update, you may have to redo that setup.
+- **Made by one person, tested on a few MPCs.** They work well for me, but you may hit something I haven't. Please tell me if you do.
+- **Gen2 builds are new.** Every plugin has a 64-bit build that passes Akai's own checks, but few have been tried on a Gen2 MPC yet.
+- **Plugins must be allowed to run on your MPC.** On MPC OS 3.10.1 or later, switch on External Plugin Support. Older firmware doesn't load third-party plugins until it has been set up for them (see [Open MPC](https://open-mpc.github.io/)). After a firmware update, you may have to do that again.
 - **Each plugin's page lists its own limits.**
 - **No warranty.** These are free and come as they are. Back up your projects. I can't be responsible for lost work.
 

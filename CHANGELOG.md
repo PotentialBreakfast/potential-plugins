@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-14 – the PotentialSuite manual
+- **[MANUAL.md](MANUAL.md)** and **[PotentialSuite-Manual.pdf](PotentialSuite-Manual.pdf)**: a user guide (every plugin, the FX chains and their load orders, USER presets, troubleshooting) and a developer reference (engine interface, parameters, layout and looks, presets, files on the MPC, building and releasing, and every parameter of every plugin).
+- Built by `manual/build.py` from `manual/src.md` and the plugin repos, so versions, parameters and chain values come from the source.
+- README and FAQ brought up to date: MPC OS 3.10.1 install, Gen2 builds, tested MPCs.
+
 ## 2026-11 – first public release
 
 ### PotentialBreaks 1.1.1

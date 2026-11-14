@@ -17,10 +17,13 @@ The plugin folder is on a drive the MPC can't run programs from, or isn't in a f
 The MPC's internal storage is full. A common cause is the MPC's own cache of plugin graphics in `/var/tmp/filmstrips`, which can grow to gigabytes. With the MPC app stopped, deleting `/var/tmp/filmstrips/temp_*` is safe, because the MPC makes new ones when it needs them.
 
 **Which file do I download?**
-The one ending **`-mpc-armv7.zip`** from [Releases](../../releases). The "Source code" links are for developers.
+On MPC OS 3.10.1 or later, the one ending **`-akai-vst2.zip`** from the plugin's Releases. On older MPC OS 3.x with the community set-up, **`-mpc-armv7.zip`**. The "Source code" links are for developers.
 
 **Will it work on my MPC One+, Live III or Key 37?**
-Not yet. Those are Gen2 machines, and there's no Gen2 build. [Let me know](../../issues/new?template=idea.yml) if you'd use one, because it helps me decide what to do next.
+It should, on MPC OS 3.10.1 or later: every plugin has a 32-bit and a 64-bit build. PotentialPatina, PotentialPunch and PotentialWax have been reported working on a Key 37. If you try one on another model, please [tell me how it went](../../issues/new/choose).
+
+**Is there a manual?**
+Yes: [MANUAL.md](MANUAL.md) ([PDF](PotentialSuite-Manual.pdf)), and every plugin has a MANUAL page on the MPC's screen.
 
 ## PotentialBreaks
 
