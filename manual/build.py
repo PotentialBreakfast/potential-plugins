@@ -68,13 +68,22 @@ def tested(plugins):
 
 
 def cpu(plugins):
+    """the newest MPC TOOLS bench result (vst/bench.txt), else the figure the CHANGELOG recorded"""
     rows = []
     for p in ORDER:
         r = repo(plugins, p)
         name = json.load(open(r + "/vst/vst.json"))["name"]
+        try:
+            lines = [l for l in open(r + "/vst/bench.txt") if l.strip()]
+            v = re.search(r"([0-9]+\.[0-9]+\.[0-9]+)\s*$", lines[0]).group(1)
+            b = json.loads(lines[-1])
+            rows.append(("**%s** %s" % (name, v), "%s %%" % b["p99_pct"], "%s %%" % b["max_pct"]))
+            continue
+        except (OSError, ValueError, IndexError, AttributeError, KeyError):
+            pass
         m = re.search(r"PASS\*\*, ([0-9.]+)% of an audio block at the 99th percentile and ([0-9.]+)% at worst", open(r + "/CHANGELOG.md").read())
         rows.append(("**%s**" % name, "%s %%" % m.group(1), "%s %%" % m.group(2)) if m else ("**%s**" % name, CPU_EXTRA.get(p, "not measured"), ""))
-    return table(["Plugin", "99th percentile", "Worst"], rows)
+    return table(["Plugin and version", "99th percentile", "Worst block"], rows)
 
 
 def chain_values(plugins):

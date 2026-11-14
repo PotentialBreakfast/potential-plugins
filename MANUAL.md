@@ -89,7 +89,7 @@ A beat usually moves through the suite in this order:
 | **PotentialPatina** | 1.5.0 | Insert effect |
 | **PotentialPunch** | 1.5.0 | Insert effect |
 | **PotentialHeat** | 1.4.0 | Insert effect |
-| **PotentialGrit** | 1.1.0 | Insert effect |
+| **PotentialGrit** | 1.1.1 | Insert effect |
 | **PotentialBleed** | 1.1.0 | Insert effect |
 | **PotentialWarp** | 1.3.0 | Insert effect |
 | **MPC TOOLS** | 1.5.6 | Companion app (Windows, Mac) |
@@ -686,33 +686,33 @@ Each plugin's GitHub page has an issue form. Short reports are fine: "the PITCH 
 |---|---|
 | **PotentialBreaks** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialWax** | MPC Key 37 (MPC OS 3.10.1); MPC Live (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
-| **PotentialCrates** | MPC One (run by the author; not yet recorded) |
+| **PotentialCrates** | MPC One (MPC OS 3.10.1) |
 | **PotentialNoise** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPatina** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPunch** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialHeat** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
-| **PotentialGrit** | MPC One (run by the author; not yet recorded) |
-| **PotentialBleed** | MPC One (run by the author; not yet recorded) |
+| **PotentialGrit** | MPC One (MPC OS 3.10.1) |
+| **PotentialBleed** | MPC One (MPC OS 3.10.1) |
 | **PotentialWarp** | MPC One (MPC OS 3.10.1) |
 
 "Tested" means someone ran that plugin on that MPC and reported it. Every plugin is built for first-generation (32-bit) and second-generation (64-bit) MPCs; the 64-bit builds pass Akai's own checks. If you try a plugin on another model, please report how it went on its GitHub page.
 
 ### CPU
 
-Measured on an MPC One with the Open MPC bench, as a share of one audio block:
+Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' **TEST** button, as a share of one audio block. Under 15 % at the 99th percentile and 50 % in the worst block is a PASS: several copies run alongside a normal project.
 
-| Plugin | 99th percentile | Worst |
+| Plugin and version | 99th percentile | Worst block |
 |---|---|---|
-| **PotentialBreaks** | 1.1 % | 2.5 % |
-| **PotentialWax** | 5.0 % | 8.0 % |
-| **PotentialCrates** | not measured (it streams audio rather than processing it) |  |
-| **PotentialNoise** | 1.6 % | 1.9 % |
-| **PotentialPatina** | 5.1 % | 5.9 % |
-| **PotentialPunch** | 3.0 % | 4.7 % |
-| **PotentialHeat** | 6.0 % | 6.6 % |
-| **PotentialGrit** | 13.1 % (1.0.0). 1.0.1 made it lighter and has not been measured again |  |
-| **PotentialBleed** | about 4 % (1.0.0) |  |
-| **PotentialWarp** | 3.7 % | 4.9 % |
+| **PotentialBreaks** 1.6.0 | 1.3 % | 2.6 % |
+| **PotentialWax** 1.7.0 | 5.5 % | 7.6 % |
+| **PotentialCrates** 1.1.0 | 1.1 % | 6.1 % |
+| **PotentialNoise** 2.4.0 | 1.8 % | 3.1 % |
+| **PotentialPatina** 1.5.0 | 6.4 % | 8.9 % |
+| **PotentialPunch** 1.5.0 | 3.1 % | 4.8 % |
+| **PotentialHeat** 1.4.0 | 5.9 % | 7.0 % |
+| **PotentialGrit** 1.1.0 | 10.9 % | 28.0 % |
+| **PotentialBleed** 1.1.0 | 3.3 % | 4.8 % |
+| **PotentialWarp** 1.3.0 | 4.5 % | 6.4 % |
 
 # Part 2: Developer reference
 

@@ -643,7 +643,7 @@ Each plugin's GitHub page has an issue form. Short reports are fine: "the PITCH 
 
 ### CPU
 
-Measured on an MPC One with the Open MPC bench, as a share of one audio block:
+Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' **TEST** button, as a share of one audio block. Under 15 % at the 99th percentile and 50 % in the worst block is a PASS: several copies run alongside a normal project.
 
 {{CPU}}
 
