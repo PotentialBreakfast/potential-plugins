@@ -710,7 +710,7 @@ Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' 
 | **PotentialPatina** 1.5.0 | 6.4 % | 8.9 % |
 | **PotentialPunch** 1.5.0 | 3.1 % | 4.8 % |
 | **PotentialHeat** 1.4.0 | 5.9 % | 7.0 % |
-| **PotentialGrit** 1.1.0 | 10.9 % | 28.0 % |
+| **PotentialGrit** 1.1.1 | 3.0 % | 3.9 % |
 | **PotentialBleed** 1.1.0 | 3.3 % | 4.8 % |
 | **PotentialWarp** 1.3.0 | 4.5 % | 6.4 % |
 
