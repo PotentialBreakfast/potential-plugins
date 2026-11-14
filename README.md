@@ -15,6 +15,8 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 | [**PotentialPunch**](https://github.com/PotentialBreakfast/mpc-vst-potentialpunch) | Insert effect | Transient shaper: more or less attack and sustain on drums, with presets |
 | [**PotentialHeat**](https://github.com/PotentialBreakfast/mpc-vst-potentialheat) | Insert effect | Soft clipper and bus saturator: warmth and loudness without harsh peaks, with presets |
 | [**PotentialWarp**](https://github.com/PotentialBreakfast/mpc-vst-potentialwarp) | Insert effect | Tempo-locked mangler: half time, tape stop, stutter, reverse and gates, with swing and triplets |
+| [**PotentialGrit**](https://github.com/PotentialBreakfast/mpc-vst-potentialgrit) | Insert effect | Seven lo-fi effects on pads: dust, crush, filter, kill EQ, tempo echo, chop and ring mod |
+| [**PotentialBleed**](https://github.com/PotentialBreakfast/mpc-vst-potentialbleed) | Insert effect | Ghost bleed: quiet synthetic residue behind each hit (snare wires, cabinet, piano board and more) |
 | [**PotentialNoise**](https://github.com/PotentialBreakfast/mpc-vst-potentialnoise) | Instrument (mixing tool) | Calibrated pink-noise reference for balancing a mix, with test tones and a speaker check |
 
 Punch and Heat are made to work together: Punch shapes the hit, Heat catches the peaks.
@@ -26,12 +28,36 @@ Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, 
 | ![PotentialBreaks on an MPC One](docs/images/potentialbreaks.png) | ![PotentialWax on an MPC One](docs/images/potentialwax.png) | ![PotentialPatina on an MPC One](docs/images/potentialpatina.png) |
 | **PotentialPunch** | **PotentialHeat** | **PotentialNoise** |
 | ![PotentialPunch on an MPC One](docs/images/potentialpunch.png) | ![PotentialHeat on an MPC One](docs/images/potentialheat.png) | ![PotentialNoise on an MPC One](docs/images/potentialnoise.png) |
-| **PotentialWarp** | **PotentialCrates** | |
-| ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | ![PotentialCrates on an MPC One](docs/images/potentialcrates.png) | |
+| **PotentialWarp** | **PotentialCrates** | **PotentialGrit** |
+| ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | ![PotentialCrates on an MPC One](docs/images/potentialcrates.png) | ![PotentialGrit on an MPC One](docs/images/potentialgrit.png) |
+| **PotentialBleed** | | |
+| ![PotentialBleed on an MPC One](docs/images/potentialbleed.png) | | |
 
 *All in the Print Plate look. Every plugin also has Night Rack and Colour Block, switched on its SETTINGS page.*
 
 ---
+
+## FX chains
+
+Four ready-made chains. Put the plugins on a track's inserts in the order shown, then pick **the same preset name in each one**:
+- **Patina, Grit and Bleed:** from the MPC's PRESET menu.
+- **Punch:** from its own PRESETS buttons.
+
+| Chain | For | Inserts, in order |
+|---|---|---|
+| **Dusty Loop** | soul, jazz and library loops | Bleed (SOUNDBOARD) → Patina ('60s 45) → Grit (FILTER, low pass ~4 kHz) |
+| **90s Stab** | chopped horns, keys and vocal stabs | Grit (CRUSH, 12-bit ~26 kHz) → Punch → Bleed (TINES) → Patina ('90s CASSETTE) |
+| **Break Bus** | a boom-bap drum bus | Punch → Grit (DUST) → Bleed (WIRES) → Patina ('70s TAPE) |
+| **Dub Drums** | lo-fi dub drums | Patina ('80s SAMPLER) → Punch → Bleed (ROOM) → Grit (ECHO 1/8D) |
+
+Dusty Loop doesn't use Punch. Every preset is a starting point, so tweak from there.
+
+Rules of thumb:
+- **Punch early**, so the hits are shaped before compression, crushing or tape.
+- **Bleed before Patina**, so the bleed is aged with the sound instead of pasted on top.
+- **Echo and chop last.**
+- **One noise source per chain.**
+- **Match levels with OUTPUT** before you decide.
 
 ## Will it work on my MPC?
 
@@ -54,7 +80,7 @@ The short version:
 1. Open the plugin's page (table above), download its `-mpc-armv7.zip` from **Releases**, and leave it zipped.
 2. Install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/): connect, drop the zip in, press Install. Or install over SSH (see the guide).
 3. **Save your project first.** Installing restarts the MPC app.
-4. Breaks, Wax, Crates and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat and Warp are **insert effects**.
+4. Breaks, Wax, Crates and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat, Warp, Grit and Bleed are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
@@ -87,6 +113,7 @@ You don't need to be technical. "The PITCH knob does nothing on my Live II" is a
 ## Credits
 
 - Built on **[mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plugins)** by sd88me (MIT), the open kit that makes MPC plugins possible: the plugin wrapper, skin builder and installer.
+- PotentialGrit is inspired by DustBox (6teen Levels) and PotentialBleed by Ghost Sample (16 Levels). Both are independent designs with their own code.
 - PotentialCrates is a fork of **[Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger)** by sd88me, with its streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream) (both MIT).
 - Audio file reading by **[dr_libs](https://github.com/mackron/dr_libs)** (dr_wav and dr_flac) by David Reid (public domain / MIT-0).
 - The look matches the dark theme I made for sd88me's Lucky Dip.
