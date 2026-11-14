@@ -1,6 +1,6 @@
 # PotentialSuite Manual
 
-*Ten free plugins for Akai MPC standalone hardware, by PotentialBreaks.*
+*Eleven free plugins for Akai MPC standalone hardware, by PotentialBreaks.*
 
 *Edition 1 · November 2026*
 
@@ -37,6 +37,7 @@ The newest copy of this manual is at [github.com/PotentialBreakfast/potential-pl
   - [PotentialBreaks](#potentialbreaks)
   - [PotentialWax](#potentialwax)
   - [PotentialCrates](#potentialcrates)
+  - [PotentialKits](#potentialkits)
   - [PotentialNoise](#potentialnoise)
   - [PotentialPatina](#potentialpatina)
   - [PotentialPunch](#potentialpunch)
@@ -51,13 +52,14 @@ The newest copy of this manual is at [github.com/PotentialBreakfast/potential-pl
 
 ## 1. The suite at a glance
 
-PotentialSuite is ten plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
+PotentialSuite is eleven plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
 
 | Plugin | Loads as | What it is |
 |---|---|---|
 | **PotentialBreaks** | Instrument | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo |
 | **PotentialWax** | Instrument | Melodic sampler: songs and loops on 16 pads, with tempo and key matched |
 | **PotentialCrates** | Instrument | Record digger: finds records on Discogs and streams one into your track (needs a network connection) |
+| **PotentialKits** | Instrument | Drum-kit builder: 16 sounds from your own sample folders, with kit styles, ROLL, and pitch, decay and choke per pad |
 | **PotentialNoise** | Instrument | Mixing tool: calibrated pink noise, test tones and a speaker check |
 | **PotentialPatina** | Insert&nbsp;effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room |
 | **PotentialPunch** | Insert&nbsp;effect | Transient shaper: more or less attack and sustain |
@@ -72,8 +74,8 @@ PotentialSuite is ten plugins that run inside the MPC like its own instruments a
 
 A beat usually moves through the suite in this order:
 
-1. **Dig.** PotentialCrates finds a record. PotentialBreaks and PotentialWax dig through your own folders.
-2. **Chop.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key.
+1. **Dig.** PotentialCrates finds a record. PotentialBreaks, PotentialWax and PotentialKits dig through your own folders.
+2. **Chop and build.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key. Kits builds a drum kit from your one-shots.
 3. **Colour.** Punch, Grit, Bleed and Patina shape and age the sound. Four ready-made chains set them up together (chapter 6).
 4. **Glue and bend.** Heat warms a bus and catches peaks. Warp adds half time, tape stops and stutters in time.
 5. **Balance.** PotentialNoise gives you a quick, neutral rough mix.
@@ -85,6 +87,7 @@ A beat usually moves through the suite in this order:
 | **PotentialBreaks** | 1.6.0 | Instrument |
 | **PotentialWax** | 1.7.0 | Instrument |
 | **PotentialCrates** | 1.1.0 | Instrument |
+| **PotentialKits** | 1.0.0 | Instrument |
 | **PotentialNoise** | 2.4.0 | Instrument |
 | **PotentialPatina** | 1.5.0 | Insert effect |
 | **PotentialPunch** | 1.5.0 | Insert effect |
@@ -92,7 +95,7 @@ A beat usually moves through the suite in this order:
 | **PotentialGrit** | 1.1.1 | Insert effect |
 | **PotentialBleed** | 1.1.0 | Insert effect |
 | **PotentialWarp** | 1.3.0 | Insert effect |
-| **MPC TOOLS** | 1.5.6 | Companion app (Windows, Mac) |
+| **MPC TOOLS** | 1.5.7 | Companion app (Windows, Mac) |
 
 ## 2. Getting started
 
@@ -125,7 +128,7 @@ Download the file ending `-mpc-armv7.zip` and leave it zipped. Open the free **M
 
 ### Loading a plugin
 
-- **Breaks, Wax, Crates and Noise** are instruments. Make a plugin track or plugin program and pick the plugin from the instrument list.
+- **Breaks, Wax, Crates, Kits and Noise** are instruments. Make a plugin track or plugin program and pick the plugin from the instrument list.
 - **Patina, Punch, Heat, Grit, Bleed and Warp** are insert effects. Open the inserts of a track, program, pad, bus or the master, tap an empty slot and pick the plugin from the effect list.
 
 ### Network safety
@@ -145,7 +148,7 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 - **MANUAL**: the plugin's own manual, a few pages of text with page buttons along the top.
 - **SETTINGS** (SETUP in PotentialWax): the LOOK selector.
-- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7).
+- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7). PotentialKits has eight USER KITS on its DIP page.
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
@@ -155,7 +158,7 @@ Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour
 
 ### ROLL
 
-**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters.
+**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters. In Kits it rolls new samples, and at MEDIUM and WILD pitch and decay too.
 
 ### Presets
 
@@ -327,7 +330,41 @@ The song's waveform with all 16 cues. Playing a pad selects it. For the selected
 - Check that you have the right to use what you sample before you release it.
 - PotentialCrates is a fork of Crate Digger by sd88me, built on Charles Vestal's schwung-webstream.
 
-### 4.4 PotentialNoise
+### 4.4 PotentialKits
+
+![PotentialKits](docs/images/potentialkits.png)
+
+**A drum kit from your own samples.** PotentialKits reaches into your sample folders and pulls out 16 sounds for the pads: a kick, a snare, hats, percussion and a few surprises. Lock what you like, roll the rest, shape each pad, then save it as a real MPC drum program. It is a fork of sd88me's Lucky Dip.
+
+**Quick start**
+
+1. Load PotentialKits as a plugin instrument. The first time, it scans the **Expansions** and **Samples** folders on every drive (pick another folder on the SETUP page).
+2. Tap **NEW KIT**, a **KIT STYLE** on the DIP page, or **ROLL**.
+3. Play the pads, or tap a tile on the KIT page to hear it.
+4. **LOCK** the pads you like and dip again. When the kit is right, tap **EXPORT KIT**.
+
+**Pages**
+
+| Page | What's on it |
+|---|---|
+| **KIT** | **NEW KIT**; the 16 pad tiles, laid out like the MPC's pads (A01 bottom left; `*` = locked); the selected pad: **LOCK**, **PLAY**, **REROLL**, **CLEAR**, **GAIN**, **PITCH** (±12 semitones), **DECAY** (100 % = the whole sample), **CHOKE** (OFF or group 1-4), **FAVOURITE**, **REJECT** |
+| **DIP** | **KIT STYLES** (CLASSIC, BOOM BAP, LO-FI, TRAP, HOUSE, DUSTY JAZZ, PERCUSSION, ELECTRO, WEIRD), **ROLL** with MILD / MEDIUM / WILD, **USER KITS**, and **NEW KIT**, **CLEAR ALL**, **UNLOCK ALL**, **MATCH LEVELS**, **EXPORT KIT** |
+| **POOL** | What the selected pad draws from: 23 sounds in drums, metals, tonal and texture. **FOLLOW PLAYED PAD** |
+| **SETUP** | Sample and export folders, **RESCAN**, copy or link samples, **SKIP LOOPS**, **NO DUPLICATES**, **MAX SIZE**, and the LOOK |
+
+**Kit styles** set what each pad draws from, its pitch, decay and choke, then dip. Locked pads are left alone. **ROLL:** MILD gives up to four pads a new sample; MEDIUM makes a new kit with a little pitch and decay; WILD also mixes up what the pads draw from.
+
+**Exported kits** are normal MPC drum programs (`.xpm`) with the 16 sounds on pads A01-A16, in `PotentialKits/Kits` at the top of the plugin's drive by default. Pads with PITCH, DECAY or GAIN changed are written as you hear them (new WAV files); CHOKE becomes the program's mute groups. With LINK TO ORIGINALS the samples stay where they are and PITCH is set on the pad instead.
+
+**Q-Links:** GAIN, PITCH, DECAY and CHOKE of the selected pad (KIT page).
+
+**Good to know**
+
+- Samples are sorted by their folder and file names (a folder called `Kicks` holds kicks). FAVOURITE makes a sample twice as likely; REJECT means never again (undo it in `data/prefs.txt`).
+- Pads are one-shots, one voice each. Very long files are cut to 15 seconds.
+- Your project remembers the kit, locks and settings, but not the samples themselves: a moved sample shows `!` on its tile.
+
+### 4.5 PotentialNoise
 
 ![PotentialNoise](docs/images/potentialnoise.png)
 
@@ -632,6 +669,8 @@ Patina, Punch, Heat, Grit and Bleed each have a **USER** page with eight slots o
 
 **What a slot keeps:** the knobs and switches that make the sound. In Grit, the effect that is on and the settings of all seven. It does not keep the ROLL setting, the look, the built-in preset's highlight (Punch and Heat) or Bleed's LISTEN switch.
 
+**PotentialKits** has the same thing for whole kits: **USER KITS** on its DIP page keep the samples, locks, sounds, pitch, decay and choke of all 16 pads, in `PotentialSuite Presets/PotentialKits/`.
+
 **Where the slots live:** on the drive the plugin is on, in a folder called `PotentialSuite Presets` beside `VST2 Plugins`, one small text file per plugin. So:
 
 - every project sees the same slots, and so does every copy of the plugin on other tracks;
@@ -653,6 +692,9 @@ A new look shows the next time the plugin loads. Take the plugin off the track a
 
 **My look went back to Print Plate after an update.**
 MPC TOOLS before 1.5.6 replaced the whole plugin folder. Update MPC TOOLS, then pick the look again.
+
+**PotentialKits says No samples found.**
+It scans the Expansions and Samples folders at the top of each drive. Pick your sample folder on its SETUP page and tap **RESCAN**. Samples must be WAV or AIFF.
 
 **PotentialBreaks says NO BREAKS FOUND, or PotentialWax finds no songs.**
 Check the folder name and place (chapters 4.1 and 4.2), then tap **RESCAN**. Breaks reads WAV and FLAC; Wax reads MP3, WAV and FLAC.
@@ -687,6 +729,7 @@ Each plugin's GitHub page has an issue form. Short reports are fine: "the PITCH 
 | **PotentialBreaks** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialWax** | MPC Key 37 (MPC OS 3.10.1); MPC Live (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialCrates** | MPC One (MPC OS 3.10.1) |
+| **PotentialKits** | MPC One (run by the author; not yet recorded) |
 | **PotentialNoise** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPatina** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPunch** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
@@ -706,6 +749,7 @@ Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' 
 | **PotentialBreaks** 1.6.0 | 1.3 % | 2.6 % |
 | **PotentialWax** 1.7.0 | 5.5 % | 7.6 % |
 | **PotentialCrates** 1.1.0 | 1.1 % | 6.1 % |
+| **PotentialKits** | not measured yet |  |
 | **PotentialNoise** 2.4.0 | 1.8 % | 3.1 % |
 | **PotentialPatina** 1.5.0 | 6.4 % | 8.9 % |
 | **PotentialPunch** 1.5.0 | 3.1 % | 4.8 % |
@@ -733,7 +777,7 @@ Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's o
 
 | Repository | Holds |
 |---|---|
-| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: bleed, breaks, crates, grit, heat, noise, patina, punch, warp, wax |
+| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: bleed, breaks, crates, grit, heat, kits, noise, patina, punch, warp, wax |
 | `PotentialBreakfast/potential-plugins` | The overview page, this manual, the suite FAQ and install guide |
 | `PotentialBreakfast/mpc-tools` | MPC TOOLS, the Windows and Mac companion app (Go) |
 | `open-mpc/mpc-vst-plugins` | The build kit, and the Open MPC catalogue registry |
@@ -1019,6 +1063,9 @@ if (r) return;
 | `<drive>/PotentialBreaks/folders.txt`, `kit-folder.txt`, `Kits/` | Breaks, you | Extra library folders, your programs folder, saved kits and grooves |
 | `<drive>/MELODIC LIBRARY/` | You | Wax's library |
 | `<drive>/PotentialWax/folders.txt`, `kit-folder.txt`, `Kits/` | Wax, you | The same for Wax, and saved pads |
+| `<drive>/PotentialKits/Kits/` | Kits | Exported drum programs |
+| `<plugin folder>/data/` | Kits, you | PotentialKits' sample list, favourites and rejects (`prefs.txt`), optional `potentialkits.conf`. Kept by updates |
+| `<drive>/PotentialSuite Presets/PotentialKits/` | Kits | USER KITS |
 | `<plugin folder>/channels.txt` | You | Crates' YouTube channels. Listed as `user_data` in `mpc-plugin.json`, so installers keep it |
 | `<drive>/Potential-backup-<date>/` | MPC TOOLS | Old copies moved aside by an update |
 
@@ -1087,8 +1134,9 @@ MPC TOOLS finds the newest release of each plugin from its GitHub releases page,
 
 ## 17. Credits and licences
 
-- All ten plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
+- All eleven plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
 - Built with the **Open MPC kit**, [mpc-vst-plugins](https://github.com/open-mpc/mpc-vst-plugins) (MIT), started by sd88me: the plugin wrapper, skin builder and installer.
+- **PotentialKits** is a fork of [Lucky Dip](https://github.com/sd88me/mpc-vst-luckydip) by sd88me (MIT), whose kit engine came from his schwung-kit-builder and force-kit-builder.
 - **PotentialCrates** is a fork of [Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger) by sd88me, with a streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream). Its engine bundle carries yt-dlp (Unlicense), ffmpeg (GPL-3.0) and Python (PSF).
 - **PotentialGrit** is inspired by DustBox and **PotentialBleed** by Ghost Sample. **PotentialWax** is inspired by the way Serato Sample works, **PotentialWarp** is in the spirit of Gross Beat, and **PotentialPatina** by the "retro colour" style of plugin. All are independent designs with their own code, not affiliated with those products.
 - Audio file reading by [dr_libs](https://github.com/mackron/dr_libs) by David Reid.
@@ -1257,6 +1305,186 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 46 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
 | 47–54 | `res_1` … `res_8` | Result 1 … Result 8 |  |  | slot |
 | 55 | `manual_page` | Manual Page | START, CRATES, DIG, SAMPLING, SUITE, HELP | START |  |
+
+## PotentialKits
+
+203 parameters.
+
+| # | Key | Name | Range or options | Default | Kind |
+|---|---|---|---|---|---|
+| 0 | `status` | Status | 0 to 0 |  | text |
+| 1 | `sel_pad` | Pad | 1 to 16 | 1 |  |
+| 2 | `sel_gain` | Gain | 0 to 200 % | 100 |  |
+| 3 | `generate` | Generate All | 0 to 1 |  |  |
+| 4 | `clear_all` | Clear All | 0 to 1 |  |  |
+| 5 | `normalise` | Match Levels | 0 to 1 |  |  |
+| 6 | `export` | Export Kit | 0 to 1 |  |  |
+| 7 | `rescan` | Rescan Library | 0 to 1 |  |  |
+| 8 | `unlock_all` | Unlock All | 0 to 1 |  |  |
+| 9 | `prevent_dup` | No Duplicates | OFF, ON | ON |  |
+| 10 | `sel_prev` | Prev Pad | 0 to 1 |  |  |
+| 11 | `sel_next` | Next Pad | 0 to 1 |  |  |
+| 12 | `sel_name` | Sample | 0 to 0 |  | text |
+| 13 | `sel_cat` | Category | 0 to 0 |  | text |
+| 14 | `sel_cat_kick` | Kick | 0 to 1 |  | text |
+| 15 | `sel_cat_snare` | Snare | 0 to 1 |  | text |
+| 16 | `sel_cat_rim` | Rim | 0 to 1 |  | text |
+| 17 | `sel_cat_clap` | Clap | 0 to 1 |  | text |
+| 18 | `sel_cat_hat` | Hat | 0 to 1 |  | text |
+| 19 | `sel_cat_closed_hat` | Closed Hat | 0 to 1 |  | text |
+| 20 | `sel_cat_open_hat` | Open Hat | 0 to 1 |  | text |
+| 21 | `sel_cat_tom` | Tom | 0 to 1 |  | text |
+| 22 | `sel_cat_conga` | Conga | 0 to 1 |  | text |
+| 23 | `sel_cat_percussion` | Percussion | 0 to 1 |  | text |
+| 24 | `sel_cat_crash` | Crash | 0 to 1 |  | text |
+| 25 | `sel_cat_ride` | Ride | 0 to 1 |  | text |
+| 26 | `sel_cat_cymbal` | Cymbal | 0 to 1 |  | text |
+| 27 | `sel_cat_fx` | Fx | 0 to 1 |  | text |
+| 28 | `sel_cat_glitch` | Glitch | 0 to 1 |  | text |
+| 29 | `sel_cat_vox` | Vox | 0 to 1 |  | text |
+| 30 | `sel_cat_bass` | Bass | 0 to 1 |  | text |
+| 31 | `sel_cat_synth` | Synth | 0 to 1 |  | text |
+| 32 | `sel_cat_stab` | Stab | 0 to 1 |  | text |
+| 33 | `sel_cat_chord` | Chord | 0 to 1 |  | text |
+| 34 | `sel_cat_lead` | Lead | 0 to 1 |  | text |
+| 35 | `sel_cat_pad` | Pad | 0 to 1 |  | text |
+| 36 | `sel_cat_other` | Other | 0 to 1 |  | text |
+| 37 | `sel_lock` | Lock | 0 to 1 |  | text |
+| 38 | `sel_reroll` | Reroll | 0 to 1 |  |  |
+| 39 | `sel_clear` | Clear | 0 to 1 |  |  |
+| 40 | `sel_play` | Play | 0 to 1 |  |  |
+| 41 | `sel_fav` | Favourite | 0 to 1 |  |  |
+| 42 | `sel_reject` | Reject | 0 to 1 |  |  |
+| 43 | `export_name` | Last Export | 0 to 0 |  | text |
+| 44 | `pad1_name` | Pad 1 | 0 to 0 |  | text |
+| 45 | `pad1_pill` | Pad 1 Pool | 0 to 0 |  | text |
+| 46 | `pad1_gain` | Pad 1 Gain | 0 to 200 % | 100 |  |
+| 47 | `pad1_lock` | Pad 1 Lock | 0 to 1 |  | text |
+| 48 | `pad1_reroll` | Pad 1 Reroll | 0 to 1 |  |  |
+| 49 | `pad1_play` | Pad 1 Play | 0 to 1 |  |  |
+| 50 | `pad2_name` | Pad 2 | 0 to 0 |  | text |
+| 51 | `pad2_pill` | Pad 2 Pool | 0 to 0 |  | text |
+| 52 | `pad2_gain` | Pad 2 Gain | 0 to 200 % | 100 |  |
+| 53 | `pad2_lock` | Pad 2 Lock | 0 to 1 |  | text |
+| 54 | `pad2_reroll` | Pad 2 Reroll | 0 to 1 |  |  |
+| 55 | `pad2_play` | Pad 2 Play | 0 to 1 |  |  |
+| 56 | `pad3_name` | Pad 3 | 0 to 0 |  | text |
+| 57 | `pad3_pill` | Pad 3 Pool | 0 to 0 |  | text |
+| 58 | `pad3_gain` | Pad 3 Gain | 0 to 200 % | 100 |  |
+| 59 | `pad3_lock` | Pad 3 Lock | 0 to 1 |  | text |
+| 60 | `pad3_reroll` | Pad 3 Reroll | 0 to 1 |  |  |
+| 61 | `pad3_play` | Pad 3 Play | 0 to 1 |  |  |
+| 62 | `pad4_name` | Pad 4 | 0 to 0 |  | text |
+| 63 | `pad4_pill` | Pad 4 Pool | 0 to 0 |  | text |
+| 64 | `pad4_gain` | Pad 4 Gain | 0 to 200 % | 100 |  |
+| 65 | `pad4_lock` | Pad 4 Lock | 0 to 1 |  | text |
+| 66 | `pad4_reroll` | Pad 4 Reroll | 0 to 1 |  |  |
+| 67 | `pad4_play` | Pad 4 Play | 0 to 1 |  |  |
+| 68 | `pad5_name` | Pad 5 | 0 to 0 |  | text |
+| 69 | `pad5_pill` | Pad 5 Pool | 0 to 0 |  | text |
+| 70 | `pad5_gain` | Pad 5 Gain | 0 to 200 % | 100 |  |
+| 71 | `pad5_lock` | Pad 5 Lock | 0 to 1 |  | text |
+| 72 | `pad5_reroll` | Pad 5 Reroll | 0 to 1 |  |  |
+| 73 | `pad5_play` | Pad 5 Play | 0 to 1 |  |  |
+| 74 | `pad6_name` | Pad 6 | 0 to 0 |  | text |
+| 75 | `pad6_pill` | Pad 6 Pool | 0 to 0 |  | text |
+| 76 | `pad6_gain` | Pad 6 Gain | 0 to 200 % | 100 |  |
+| 77 | `pad6_lock` | Pad 6 Lock | 0 to 1 |  | text |
+| 78 | `pad6_reroll` | Pad 6 Reroll | 0 to 1 |  |  |
+| 79 | `pad6_play` | Pad 6 Play | 0 to 1 |  |  |
+| 80 | `pad7_name` | Pad 7 | 0 to 0 |  | text |
+| 81 | `pad7_pill` | Pad 7 Pool | 0 to 0 |  | text |
+| 82 | `pad7_gain` | Pad 7 Gain | 0 to 200 % | 100 |  |
+| 83 | `pad7_lock` | Pad 7 Lock | 0 to 1 |  | text |
+| 84 | `pad7_reroll` | Pad 7 Reroll | 0 to 1 |  |  |
+| 85 | `pad7_play` | Pad 7 Play | 0 to 1 |  |  |
+| 86 | `pad8_name` | Pad 8 | 0 to 0 |  | text |
+| 87 | `pad8_pill` | Pad 8 Pool | 0 to 0 |  | text |
+| 88 | `pad8_gain` | Pad 8 Gain | 0 to 200 % | 100 |  |
+| 89 | `pad8_lock` | Pad 8 Lock | 0 to 1 |  | text |
+| 90 | `pad8_reroll` | Pad 8 Reroll | 0 to 1 |  |  |
+| 91 | `pad8_play` | Pad 8 Play | 0 to 1 |  |  |
+| 92 | `pad9_name` | Pad 9 | 0 to 0 |  | text |
+| 93 | `pad9_pill` | Pad 9 Pool | 0 to 0 |  | text |
+| 94 | `pad9_gain` | Pad 9 Gain | 0 to 200 % | 100 |  |
+| 95 | `pad9_lock` | Pad 9 Lock | 0 to 1 |  | text |
+| 96 | `pad9_reroll` | Pad 9 Reroll | 0 to 1 |  |  |
+| 97 | `pad9_play` | Pad 9 Play | 0 to 1 |  |  |
+| 98 | `pad10_name` | Pad 10 | 0 to 0 |  | text |
+| 99 | `pad10_pill` | Pad 10 Pool | 0 to 0 |  | text |
+| 100 | `pad10_gain` | Pad 10 Gain | 0 to 200 % | 100 |  |
+| 101 | `pad10_lock` | Pad 10 Lock | 0 to 1 |  | text |
+| 102 | `pad10_reroll` | Pad 10 Reroll | 0 to 1 |  |  |
+| 103 | `pad10_play` | Pad 10 Play | 0 to 1 |  |  |
+| 104 | `pad11_name` | Pad 11 | 0 to 0 |  | text |
+| 105 | `pad11_pill` | Pad 11 Pool | 0 to 0 |  | text |
+| 106 | `pad11_gain` | Pad 11 Gain | 0 to 200 % | 100 |  |
+| 107 | `pad11_lock` | Pad 11 Lock | 0 to 1 |  | text |
+| 108 | `pad11_reroll` | Pad 11 Reroll | 0 to 1 |  |  |
+| 109 | `pad11_play` | Pad 11 Play | 0 to 1 |  |  |
+| 110 | `pad12_name` | Pad 12 | 0 to 0 |  | text |
+| 111 | `pad12_pill` | Pad 12 Pool | 0 to 0 |  | text |
+| 112 | `pad12_gain` | Pad 12 Gain | 0 to 200 % | 100 |  |
+| 113 | `pad12_lock` | Pad 12 Lock | 0 to 1 |  | text |
+| 114 | `pad12_reroll` | Pad 12 Reroll | 0 to 1 |  |  |
+| 115 | `pad12_play` | Pad 12 Play | 0 to 1 |  |  |
+| 116 | `pad13_name` | Pad 13 | 0 to 0 |  | text |
+| 117 | `pad13_pill` | Pad 13 Pool | 0 to 0 |  | text |
+| 118 | `pad13_gain` | Pad 13 Gain | 0 to 200 % | 100 |  |
+| 119 | `pad13_lock` | Pad 13 Lock | 0 to 1 |  | text |
+| 120 | `pad13_reroll` | Pad 13 Reroll | 0 to 1 |  |  |
+| 121 | `pad13_play` | Pad 13 Play | 0 to 1 |  |  |
+| 122 | `pad14_name` | Pad 14 | 0 to 0 |  | text |
+| 123 | `pad14_pill` | Pad 14 Pool | 0 to 0 |  | text |
+| 124 | `pad14_gain` | Pad 14 Gain | 0 to 200 % | 100 |  |
+| 125 | `pad14_lock` | Pad 14 Lock | 0 to 1 |  | text |
+| 126 | `pad14_reroll` | Pad 14 Reroll | 0 to 1 |  |  |
+| 127 | `pad14_play` | Pad 14 Play | 0 to 1 |  |  |
+| 128 | `pad15_name` | Pad 15 | 0 to 0 |  | text |
+| 129 | `pad15_pill` | Pad 15 Pool | 0 to 0 |  | text |
+| 130 | `pad15_gain` | Pad 15 Gain | 0 to 200 % | 100 |  |
+| 131 | `pad15_lock` | Pad 15 Lock | 0 to 1 |  | text |
+| 132 | `pad15_reroll` | Pad 15 Reroll | 0 to 1 |  |  |
+| 133 | `pad15_play` | Pad 15 Play | 0 to 1 |  |  |
+| 134 | `pad16_name` | Pad 16 | 0 to 0 |  | text |
+| 135 | `pad16_pill` | Pad 16 Pool | 0 to 0 |  | text |
+| 136 | `pad16_gain` | Pad 16 Gain | 0 to 200 % | 100 |  |
+| 137 | `pad16_lock` | Pad 16 Lock | 0 to 1 |  | text |
+| 138 | `pad16_reroll` | Pad 16 Reroll | 0 to 1 |  |  |
+| 139 | `pad16_play` | Pad 16 Play | 0 to 1 |  |  |
+| 140 | `lib_info` | Library | 0 to 0 |  | text |
+| 141 | `src_loc_name` | Source Folder | 0 to 0 |  | text |
+| 142 | `src_loc_prev` | Source Folder Prev | 0 to 1 |  |  |
+| 143 | `src_loc_next` | Source Folder Next | 0 to 1 |  |  |
+| 144 | `src_sub_name` | Source Inside | 0 to 0 |  | text |
+| 145 | `src_sub_prev` | Source Inside Prev | 0 to 1 |  |  |
+| 146 | `src_sub_next` | Source Inside Next | 0 to 1 |  |  |
+| 147 | `src_sub_prev10` | Source Inside Prev 10 | 0 to 1 |  |  |
+| 148 | `src_sub_next10` | Source Inside Next 10 | 0 to 1 |  |  |
+| 149 | `exp_loc_name` | Export Folder | 0 to 0 |  | text |
+| 150 | `exp_loc_prev` | Export Folder Prev | 0 to 1 |  |  |
+| 151 | `exp_loc_next` | Export Folder Next | 0 to 1 |  |  |
+| 152 | `exp_sub_name` | Export Inside | 0 to 0 |  | text |
+| 153 | `exp_sub_prev` | Export Inside Prev | 0 to 1 |  |  |
+| 154 | `exp_sub_next` | Export Inside Next | 0 to 1 |  |  |
+| 155 | `exp_sub_prev10` | Export Inside Prev 10 | 0 to 1 |  |  |
+| 156 | `exp_sub_next10` | Export Inside Next 10 | 0 to 1 |  |  |
+| 157 | `export_mode` | Export Samples | Copy samples, Link to originals | Copy samples |  |
+| 158 | `skip_loops` | Skip Loops | OFF, ON | ON |  |
+| 159 | `max_size` | Max File Size | Off, 1 MB, 2 MB, 5 MB, 10 MB, 20 MB | Off |  |
+| 160 | `follow` | Follow Played Pad | OFF, ON | ON |  |
+| 161 | `sel_pitch` | Pitch | -12 to 12 st | 0 |  |
+| 162 | `sel_decay` | Decay | 0 to 100 % | 100 |  |
+| 163 | `sel_choke` | Choke | OFF, 1, 2, 3, 4 | OFF |  |
+| 164–179 | `tile_1` … `tile_16` | Pad 1 Tile … Pad 16 Tile |  |  | slot |
+| 180–188 | `style_1` … `style_9` | Kit Style 1 … Kit Style 9 |  |  | trigger |
+| 189 | `dice` | Roll |  |  | trigger |
+| 190 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
+| 191 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 192 | `user_save` | Save User Kit | OFF, ON | OFF |  |
+| 193–200 | `user_1` … `user_8` | User Kit 1 … User Kit 8 |  |  | slot |
+| 201 | `sel_pill` | Pad Sound | 0 to 0 |  | text |
+| 202 | `manual_page` | Manual Page | START, KIT, DIP, EXPORT, POOL, HELP | START |  |
 
 ## PotentialNoise
 

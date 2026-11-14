@@ -12,15 +12,15 @@ import argparse, html, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 EDITION = "Edition 1 · November 2026"
-ORDER = ["breaks", "wax", "crates", "noise", "patina", "punch", "heat", "grit", "bleed", "warp"]
-KIND = {"breaks": "Instrument", "wax": "Instrument", "crates": "Instrument", "noise": "Instrument"}
+ORDER = ["breaks", "wax", "crates", "kits", "noise", "patina", "punch", "heat", "grit", "bleed", "warp"]
+KIND = {"breaks": "Instrument", "wax": "Instrument", "crates": "Instrument", "kits": "Instrument", "noise": "Instrument"}
 CHAINS = ["Dusty Loop", "90s Stab", "Break Bus", "Dub Drums"]
 # PotentialPunch keeps its presets in src/punch.c: attack, sustain, speed, focus, clip, mix, output
 PUNCH_CHAINS = {"90s Stab": (30, 0, "TIGHT", "FULL", "Off", 80, 0), "Break Bus": (50, 15, "MEDIUM", "FULL", "On", 100, -1),
                 "Dub Drums": (60, -25, "TIGHT", "LOWS", "Off", 100, -1)}
 # measured before a plugin's CHANGELOG recorded figures
 CPU_EXTRA = {"bleed": "about 4 % (1.0.0)", "grit": "13.1 % (1.0.0). 1.0.1 made it lighter and has not been measured again",
-             "crates": "not measured (it streams audio rather than processing it)"}
+             "crates": "not measured (it streams audio rather than processing it)", "kits": "not measured yet"}
 
 
 def repo(plugins, p):
@@ -45,7 +45,7 @@ def versions(plugins):
     for p in ORDER:
         v = json.load(open(repo(plugins, p) + "/vst/vst.json"))
         rows.append(("**%s**" % v["name"], ver(v["version"]), KIND.get(p, "Insert effect")))
-    rows.append(("**MPC TOOLS**", "1.5.6", "Companion app (Windows, Mac)"))
+    rows.append(("**MPC TOOLS**", "1.5.7", "Companion app (Windows, Mac)"))
     return table(["Plugin", "Version", "Type"], rows)
 
 
@@ -181,7 +181,7 @@ def github(md):
 # ---- the PDF ----
 
 ACCENT = {"PotentialBleed": "4f6d8a", "PotentialBreaks": "c77800", "PotentialCrates": "4f8a1e", "PotentialGrit": "8a6a3c",
-          "PotentialHeat": "e85d10", "PotentialNoise": "d94f8f", "PotentialPatina": "1f8f80", "PotentialPunch": "2d5be3",
+          "PotentialHeat": "e85d10", "PotentialKits": "a87c00", "PotentialNoise": "d94f8f", "PotentialPatina": "1f8f80", "PotentialPunch": "2d5be3",
           "PotentialWarp": "6b3fd4", "PotentialWax": "d7263d"}
 
 
@@ -218,7 +218,7 @@ def to_html(md, pages=None):
     # a short table stays on one page
     body = re.sub(r"<table>(.*?)</table>", lambda m: ('<table class="keep">' if m.group(1).count("<tr>") <= 12 else "<table>") + m.group(1) + "</table>", body, flags=re.S)
     body = body.replace('src="manual/', 'src="').replace('src="docs/', 'src="../docs/')
-    cover = ('<section class="cover"><div class="marks"></div><p class="kicker">Akai MPC standalone · ten free plugins</p>'
+    cover = ('<section class="cover"><div class="marks"></div><p class="kicker">Akai MPC standalone · eleven free plugins</p>'
              '<h1>Potential<br>Suite</h1><p class="sub">The Manual</p>'
              '<p class="lead">User guide, FX chains and load orders, and a developer reference</p>'
              '<div class="swatches">%s</div><p class="ed">%s · PotentialBreaks</p></section>'

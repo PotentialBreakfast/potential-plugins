@@ -1,6 +1,6 @@
 # PotentialSuite Manual
 
-*Ten free plugins for Akai MPC standalone hardware, by PotentialBreaks.*
+*Eleven free plugins for Akai MPC standalone hardware, by PotentialBreaks.*
 
 {{EDITION}}
 
@@ -18,13 +18,14 @@ The newest copy of this manual is at [github.com/PotentialBreakfast/potential-pl
 
 ## 1. The suite at a glance
 
-PotentialSuite is ten plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
+PotentialSuite is eleven plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
 
 | Plugin | Loads as | What it is |
 |---|---|---|
 | **PotentialBreaks** | Instrument | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo |
 | **PotentialWax** | Instrument | Melodic sampler: songs and loops on 16 pads, with tempo and key matched |
 | **PotentialCrates** | Instrument | Record digger: finds records on Discogs and streams one into your track (needs a network connection) |
+| **PotentialKits** | Instrument | Drum-kit builder: 16 sounds from your own sample folders, with kit styles, ROLL, and pitch, decay and choke per pad |
 | **PotentialNoise** | Instrument | Mixing tool: calibrated pink noise, test tones and a speaker check |
 | **PotentialPatina** | Insert&nbsp;effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room |
 | **PotentialPunch** | Insert&nbsp;effect | Transient shaper: more or less attack and sustain |
@@ -39,8 +40,8 @@ PotentialSuite is ten plugins that run inside the MPC like its own instruments a
 
 A beat usually moves through the suite in this order:
 
-1. **Dig.** PotentialCrates finds a record. PotentialBreaks and PotentialWax dig through your own folders.
-2. **Chop.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key.
+1. **Dig.** PotentialCrates finds a record. PotentialBreaks, PotentialWax and PotentialKits dig through your own folders.
+2. **Chop and build.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key. Kits builds a drum kit from your one-shots.
 3. **Colour.** Punch, Grit, Bleed and Patina shape and age the sound. Four ready-made chains set them up together (chapter 6).
 4. **Glue and bend.** Heat warms a bus and catches peaks. Warp adds half time, tape stops and stutters in time.
 5. **Balance.** PotentialNoise gives you a quick, neutral rough mix.
@@ -80,7 +81,7 @@ Download the file ending `-mpc-armv7.zip` and leave it zipped. Open the free **M
 
 ### Loading a plugin
 
-- **Breaks, Wax, Crates and Noise** are instruments. Make a plugin track or plugin program and pick the plugin from the instrument list.
+- **Breaks, Wax, Crates, Kits and Noise** are instruments. Make a plugin track or plugin program and pick the plugin from the instrument list.
 - **Patina, Punch, Heat, Grit, Bleed and Warp** are insert effects. Open the inserts of a track, program, pad, bus or the master, tap an empty slot and pick the plugin from the effect list.
 
 ### Network safety
@@ -100,7 +101,7 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 - **MANUAL**: the plugin's own manual, a few pages of text with page buttons along the top.
 - **SETTINGS** (SETUP in PotentialWax): the LOOK selector.
-- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7).
+- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7). PotentialKits has eight USER KITS on its DIP page.
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
@@ -110,7 +111,7 @@ Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour
 
 ### ROLL
 
-**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters.
+**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters. In Kits it rolls new samples, and at MEDIUM and WILD pitch and decay too.
 
 ### Presets
 
@@ -282,7 +283,41 @@ The song's waveform with all 16 cues. Playing a pad selects it. For the selected
 - Check that you have the right to use what you sample before you release it.
 - PotentialCrates is a fork of Crate Digger by sd88me, built on Charles Vestal's schwung-webstream.
 
-### 4.4 PotentialNoise
+### 4.4 PotentialKits
+
+![PotentialKits](docs/images/potentialkits.png)
+
+**A drum kit from your own samples.** PotentialKits reaches into your sample folders and pulls out 16 sounds for the pads: a kick, a snare, hats, percussion and a few surprises. Lock what you like, roll the rest, shape each pad, then save it as a real MPC drum program. It is a fork of sd88me's Lucky Dip.
+
+**Quick start**
+
+1. Load PotentialKits as a plugin instrument. The first time, it scans the **Expansions** and **Samples** folders on every drive (pick another folder on the SETUP page).
+2. Tap **NEW KIT**, a **KIT STYLE** on the DIP page, or **ROLL**.
+3. Play the pads, or tap a tile on the KIT page to hear it.
+4. **LOCK** the pads you like and dip again. When the kit is right, tap **EXPORT KIT**.
+
+**Pages**
+
+| Page | What's on it |
+|---|---|
+| **KIT** | **NEW KIT**; the 16 pad tiles, laid out like the MPC's pads (A01 bottom left; `*` = locked); the selected pad: **LOCK**, **PLAY**, **REROLL**, **CLEAR**, **GAIN**, **PITCH** (±12 semitones), **DECAY** (100 % = the whole sample), **CHOKE** (OFF or group 1-4), **FAVOURITE**, **REJECT** |
+| **DIP** | **KIT STYLES** (CLASSIC, BOOM BAP, LO-FI, TRAP, HOUSE, DUSTY JAZZ, PERCUSSION, ELECTRO, WEIRD), **ROLL** with MILD / MEDIUM / WILD, **USER KITS**, and **NEW KIT**, **CLEAR ALL**, **UNLOCK ALL**, **MATCH LEVELS**, **EXPORT KIT** |
+| **POOL** | What the selected pad draws from: 23 sounds in drums, metals, tonal and texture. **FOLLOW PLAYED PAD** |
+| **SETUP** | Sample and export folders, **RESCAN**, copy or link samples, **SKIP LOOPS**, **NO DUPLICATES**, **MAX SIZE**, and the LOOK |
+
+**Kit styles** set what each pad draws from, its pitch, decay and choke, then dip. Locked pads are left alone. **ROLL:** MILD gives up to four pads a new sample; MEDIUM makes a new kit with a little pitch and decay; WILD also mixes up what the pads draw from.
+
+**Exported kits** are normal MPC drum programs (`.xpm`) with the 16 sounds on pads A01-A16, in `PotentialKits/Kits` at the top of the plugin's drive by default. Pads with PITCH, DECAY or GAIN changed are written as you hear them (new WAV files); CHOKE becomes the program's mute groups. With LINK TO ORIGINALS the samples stay where they are and PITCH is set on the pad instead.
+
+**Q-Links:** GAIN, PITCH, DECAY and CHOKE of the selected pad (KIT page).
+
+**Good to know**
+
+- Samples are sorted by their folder and file names (a folder called `Kicks` holds kicks). FAVOURITE makes a sample twice as likely; REJECT means never again (undo it in `data/prefs.txt`).
+- Pads are one-shots, one voice each. Very long files are cut to 15 seconds.
+- Your project remembers the kit, locks and settings, but not the samples themselves: a moved sample shows `!` on its tile.
+
+### 4.5 PotentialNoise
 
 ![PotentialNoise](docs/images/potentialnoise.png)
 
@@ -587,6 +622,8 @@ Patina, Punch, Heat, Grit and Bleed each have a **USER** page with eight slots o
 
 **What a slot keeps:** the knobs and switches that make the sound. In Grit, the effect that is on and the settings of all seven. It does not keep the ROLL setting, the look, the built-in preset's highlight (Punch and Heat) or Bleed's LISTEN switch.
 
+**PotentialKits** has the same thing for whole kits: **USER KITS** on its DIP page keep the samples, locks, sounds, pitch, decay and choke of all 16 pads, in `PotentialSuite Presets/PotentialKits/`.
+
 **Where the slots live:** on the drive the plugin is on, in a folder called `PotentialSuite Presets` beside `VST2 Plugins`, one small text file per plugin. So:
 
 - every project sees the same slots, and so does every copy of the plugin on other tracks;
@@ -608,6 +645,9 @@ A new look shows the next time the plugin loads. Take the plugin off the track a
 
 **My look went back to Print Plate after an update.**
 MPC TOOLS before 1.5.6 replaced the whole plugin folder. Update MPC TOOLS, then pick the look again.
+
+**PotentialKits says No samples found.**
+It scans the Expansions and Samples folders at the top of each drive. Pick your sample folder on its SETUP page and tap **RESCAN**. Samples must be WAV or AIFF.
 
 **PotentialBreaks says NO BREAKS FOUND, or PotentialWax finds no songs.**
 Check the folder name and place (chapters 4.1 and 4.2), then tap **RESCAN**. Breaks reads WAV and FLAC; Wax reads MP3, WAV and FLAC.
@@ -666,7 +706,7 @@ Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's o
 
 | Repository | Holds |
 |---|---|
-| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: bleed, breaks, crates, grit, heat, noise, patina, punch, warp, wax |
+| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: bleed, breaks, crates, grit, heat, kits, noise, patina, punch, warp, wax |
 | `PotentialBreakfast/potential-plugins` | The overview page, this manual, the suite FAQ and install guide |
 | `PotentialBreakfast/mpc-tools` | MPC TOOLS, the Windows and Mac companion app (Go) |
 | `open-mpc/mpc-vst-plugins` | The build kit, and the Open MPC catalogue registry |
@@ -877,6 +917,9 @@ if (r) return;
 | `<drive>/PotentialBreaks/folders.txt`, `kit-folder.txt`, `Kits/` | Breaks, you | Extra library folders, your programs folder, saved kits and grooves |
 | `<drive>/MELODIC LIBRARY/` | You | Wax's library |
 | `<drive>/PotentialWax/folders.txt`, `kit-folder.txt`, `Kits/` | Wax, you | The same for Wax, and saved pads |
+| `<drive>/PotentialKits/Kits/` | Kits | Exported drum programs |
+| `<plugin folder>/data/` | Kits, you | PotentialKits' sample list, favourites and rejects (`prefs.txt`), optional `potentialkits.conf`. Kept by updates |
+| `<drive>/PotentialSuite Presets/PotentialKits/` | Kits | USER KITS |
 | `<plugin folder>/channels.txt` | You | Crates' YouTube channels. Listed as `user_data` in `mpc-plugin.json`, so installers keep it |
 | `<drive>/Potential-backup-<date>/` | MPC TOOLS | Old copies moved aside by an update |
 
@@ -945,8 +988,9 @@ MPC TOOLS finds the newest release of each plugin from its GitHub releases page,
 
 ## 17. Credits and licences
 
-- All ten plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
+- All eleven plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
 - Built with the **Open MPC kit**, [mpc-vst-plugins](https://github.com/open-mpc/mpc-vst-plugins) (MIT), started by sd88me: the plugin wrapper, skin builder and installer.
+- **PotentialKits** is a fork of [Lucky Dip](https://github.com/sd88me/mpc-vst-luckydip) by sd88me (MIT), whose kit engine came from his schwung-kit-builder and force-kit-builder.
 - **PotentialCrates** is a fork of [Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger) by sd88me, with a streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream). Its engine bundle carries yt-dlp (Unlicense), ffmpeg (GPL-3.0) and Python (PSF).
 - **PotentialGrit** is inspired by DustBox and **PotentialBleed** by Ghost Sample. **PotentialWax** is inspired by the way Serato Sample works, **PotentialWarp** is in the spirit of Gross Beat, and **PotentialPatina** by the "retro colour" style of plugin. All are independent designs with their own code, not affiliated with those products.
 - Audio file reading by [dr_libs](https://github.com/mackron/dr_libs) by David Reid.

@@ -12,6 +12,7 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 |---|---|---|
 | [**PotentialBreaks**](https://github.com/PotentialBreakfast/mpc-vst-potentialbreaks) | Instrument | Drum-break slicer: a random break from your own library on 16 pads, chopped and matched to your tempo |
 | [**PotentialWax**](https://github.com/PotentialBreakfast/mpc-vst-potentialwax) | Instrument | Melodic sampler: chop loops and whole songs onto pads, key and tempo matched |
+| [**PotentialKits**](https://github.com/PotentialBreakfast/mpc-vst-potentialkits) | Instrument | Drum-kit builder: 16 sounds from your own sample folders, one-tap KIT STYLES and ROLL, pitch, decay and choke per pad, saved as an MPC drum program |
 | [**PotentialCrates**](https://github.com/PotentialBreakfast/mpc-vst-potentialcrates) | Instrument | Record digger: one-tap crates and ROLL dice find records on Discogs and stream them into your track (needs a network connection) |
 | [**PotentialPatina**](https://github.com/PotentialBreakfast/mpc-vst-potentialpatina) | Insert effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room in one box |
 | [**PotentialPunch**](https://github.com/PotentialBreakfast/mpc-vst-potentialpunch) | Insert effect | Transient shaper: more or less attack and sustain on drums, with presets |
@@ -32,8 +33,8 @@ Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, 
 | ![PotentialPunch on an MPC One](docs/images/potentialpunch.png) | ![PotentialHeat on an MPC One](docs/images/potentialheat.png) | ![PotentialNoise on an MPC One](docs/images/potentialnoise.png) |
 | **PotentialWarp** | **PotentialCrates** | **PotentialGrit** |
 | ![PotentialWarp on an MPC One](docs/images/potentialwarp.png) | ![PotentialCrates on an MPC One](docs/images/potentialcrates.png) | ![PotentialGrit on an MPC One](docs/images/potentialgrit.png) |
-| **PotentialBleed** | | |
-| ![PotentialBleed on an MPC One](docs/images/potentialbleed.png) | | |
+| **PotentialBleed** | **PotentialKits** | |
+| ![PotentialBleed on an MPC One](docs/images/potentialbleed.png) | ![PotentialKits' KIT page](docs/images/potentialkits.png) | |
 
 *All in the Print Plate look. Every plugin also has Night Rack and Colour Block, switched on its SETTINGS page.*
 
@@ -81,9 +82,9 @@ The **Should work on** row is untested: most of these plugins have only been tri
 
 The short version (the [manual](MANUAL.md#2-getting-started) has all three ways):
 1. **MPC OS 3.10.1 or later:** open the plugin's page (table above), download its `-akai-vst2.zip` from **Releases** and unzip it. On the MPC turn on **Preferences → Enhancements (Beta) → Enable Enhancements** and **External Plugin Support**, copy the plugin's folder into **VST2 Plugins** at the top of a drive, and restart.
-2. **Or with [MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools):** the Plugins tab installs and updates all ten in one tap.
+2. **Or with [MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools):** the Plugins tab installs and updates all eleven in one tap.
 3. **Older MPC OS 3.x (Gen1):** download the `-mpc-armv7.zip` and install it with the free **MPC Plugin Installer** from [Open MPC](https://open-mpc.github.io/). Save your project first.
-4. Breaks, Wax, Crates and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat, Warp, Grit and Bleed are **insert effects**.
+4. Breaks, Wax, Crates, Kits and Noise are in the plugin instrument list (load them as a plugin program). Patina, Punch, Heat, Warp, Grit and Bleed are **insert effects**.
 
 Stuck? The [**FAQ**](FAQ.md) covers the common problems.
 
@@ -117,6 +118,7 @@ You don't need to be technical. "The PITCH knob does nothing on my Live II" is a
 
 - Built on **[mpc-vst-plugins](https://github.com/sd88me/mpc-vst-plugins)** by sd88me (MIT), the open kit that makes MPC plugins possible: the plugin wrapper, skin builder and installer.
 - PotentialGrit is inspired by DustBox (6teen Levels) and PotentialBleed by Ghost Sample (16 Levels). Both are independent designs with their own code.
+- PotentialKits is a fork of **[Lucky Dip](https://github.com/sd88me/mpc-vst-luckydip)** by sd88me (MIT): his kit-building engine, with KIT STYLES, ROLL, pitch, decay and choke, USER kits and the PotentialSuite looks added.
 - PotentialCrates is a fork of **[Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger)** by sd88me, with its streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream) (both MIT).
 - Audio file reading by **[dr_libs](https://github.com/mackron/dr_libs)** (dr_wav and dr_flac) by David Reid (public domain / MIT-0).
 - The look matches the dark theme I made for sd88me's Lucky Dip.

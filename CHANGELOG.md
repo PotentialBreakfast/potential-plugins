@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-14 – PotentialKits
+- **PotentialKits** joins the suite: a random drum-kit builder, forked from sd88me's Lucky Dip, with KIT STYLES, ROLL, pitch, decay and choke per pad, USER kits and the three looks. Added to the plugin table, the screenshots, the install notes, the credits and the manual (chapter 4.4).
+
 ## 2026-11-14 – the PotentialSuite manual
 - **[MANUAL.md](MANUAL.md)** and **[PotentialSuite-Manual.pdf](PotentialSuite-Manual.pdf)**: a user guide (every plugin, the FX chains and their load orders, USER presets, troubleshooting) and a developer reference (engine interface, parameters, layout and looks, presets, files on the MPC, building and releasing, and every parameter of every plugin).
 - Built by `manual/build.py` from `manual/src.md` and the plugin repos, so versions, parameters and chain values come from the source.
