@@ -24,7 +24,7 @@ They run inside the MPC like its own instruments and effects. Each one has its o
 
 Punch and Heat are made to work together: Punch shapes the hit, Heat catches the peaks.
 
-Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows and Mac: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, and one-click "save the last 60 seconds", plus one-tap plugin updates.
+Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, a free second-screen app for Windows and Mac: your MPC's screen live on your PC (and in OBS), file transfer, your PC's folders on the MPC, one-click "save the last 60 seconds", the MPC's own buttons from the PC, one-tap plugin updates, and a one-tap drums-only folder made from every sample on the MPC.
 
 | PotentialBreaks | PotentialWax | PotentialPatina |
 |---|---|---|
@@ -120,7 +120,7 @@ You don't need to be technical. "The PITCH knob does nothing on my Live II" is a
 - PotentialGrit is inspired by DustBox (6teen Levels) and PotentialBleed by Ghost Sample (16 Levels). Both are independent designs with their own code.
 - PotentialKits is a fork of **[Lucky Dip](https://github.com/sd88me/mpc-vst-luckydip)** by sd88me (MIT): his kit-building engine, with KIT STYLES, ROLL, pitch, decay and choke, USER kits and the PotentialSuite looks added.
 - PotentialCrates is a fork of **[Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger)** by sd88me, with its streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream) (both MIT).
-- Audio file reading by **[dr_libs](https://github.com/mackron/dr_libs)** (dr_wav and dr_flac) by David Reid (public domain / MIT-0).
+- Audio file reading by **[dr_libs](https://github.com/mackron/dr_libs)** (dr_wav, dr_flac and dr_mp3) by David Reid (public domain / MIT-0).
 - The look matches the dark theme I made for sd88me's Lucky Dip.
 - Made with help from Claude (Anthropic).
 

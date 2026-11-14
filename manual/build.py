@@ -45,7 +45,7 @@ def versions(plugins):
     for p in ORDER:
         v = json.load(open(repo(plugins, p) + "/vst/vst.json"))
         rows.append(("**%s**" % v["name"], ver(v["version"]), KIND.get(p, "Insert effect")))
-    rows.append(("**MPC TOOLS**", "1.5.7", "Companion app (Windows, Mac)"))
+    rows.append(("**MPC TOOLS**", "1.5.9", "Companion app (Windows, Mac)"))
     return table(["Plugin", "Version", "Type"], rows)
 
 

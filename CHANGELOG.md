@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-14 – the manual brought up to date
+- **Versions covered:** Breaks 1.7.0, Wax 1.8.0, Crates 1.1.2, Kits 1.1.1, Patina 1.5.1, Punch 1.5.1, Heat 1.4.1, Grit 1.1.2, Bleed 1.1.1 and MPC TOOLS 1.5.9; tested devices and CPU figures from the newest results.
+- **PotentialKits (4.4):** rewritten for the 1.1 pages (KIT, STYLES, SAVE, SETUP). The POOL and DIP pages are gone: **TYPE** on the KIT page picks what a pad plays; PLAY, CLEAR, FAVOURITE and REJECT are off the screen. New KIT page picture.
+- **MP3:** Breaks and Kits read MP3 now (Wax already did); Kits exports an MP3 pad as a WAV.
+- **Wax:** the WAVE page's moving playhead. **Crates:** `channels.txt` is made for you (from an old Crate Digger list if there is one).
+- **USER presets and troubleshooting:** SAVE stays lit until you tap a slot; which versions fixed "a USER slot did not save"; Crates' channels message.
+- **MPC TOOLS 1.5.9:** MAKE DRUM FOLDER (`DRUM ONE SHOTS` on the SD card) in chapter 4.4 and the files table; README mentions it and the Remote buttons.
+
 ## 2026-11-14 – PotentialKits
 - **PotentialKits** joins the suite: a random drum-kit builder, forked from sd88me's Lucky Dip, with KIT STYLES, ROLL, pitch, decay and choke per pad, USER kits and the three looks. Added to the plugin table, the screenshots, the install notes, the credits and the manual (chapter 4.4).
 

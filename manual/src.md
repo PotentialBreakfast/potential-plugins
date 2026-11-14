@@ -101,7 +101,7 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 - **MANUAL**: the plugin's own manual, a few pages of text with page buttons along the top.
 - **SETTINGS** (SETUP in PotentialWax): the LOOK selector.
-- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7). PotentialKits has eight USER KITS on its DIP page.
+- **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7). PotentialKits has eight USER KITS on its SAVE page.
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
@@ -140,7 +140,7 @@ Every setting is saved with your MPC project and comes back when you load it. Br
 
 **Quick start**
 
-1. Put your breaks (WAV or FLAC) in a folder called `DRUM BREAKS LIBRARY` at the top of a drive.
+1. Put your breaks (WAV, FLAC or MP3) in a folder called `DRUM BREAKS LIBRARY` at the top of a drive.
 2. Load PotentialBreaks as a plugin instrument.
 3. Tap **RANDOM BREAK**, or **ROLL** for a random break played a random way.
 4. Play the pads.
@@ -173,7 +173,7 @@ Every setting is saved with your MPC project and comes back when you load it. Br
 
 **Good to know**
 
-- Tempo comes from the file name when it has one (`Funky Drummer 101bpm.wav`). Otherwise it is measured, between 80 and 160 BPM, so a 70 BPM break may read as 140.
+- Tempo comes from the file name when it has one (`Funky Drummer 101bpm.wav`, or `.mp3`). Otherwise it is measured, between 80 and 160 BPM, so a 70 BPM break may read as 140.
 - Long tracks get a random 1, 2 or 4 bar loop cut from them, starting on a hit. Only the first 3 minutes of a file are used.
 - Stretch mode does not time-stretch: at slower tempos you hear small gaps between hits, the classic chopped sound.
 - 8 voices, 44.1 kHz playback.
@@ -214,7 +214,7 @@ Every setting is saved with your MPC project and comes back when you load it. Br
 
 **WAVE page**
 
-The song's waveform with all 16 cues. Playing a pad selects it. For the selected pad:
+The song's waveform with all 16 cues. Playing a pad selects it. While a pad plays, the playhead (a bright line with a notch at the top and bottom) moves along the waveform and the part already played lights up in Wax's colour. For the selected pad:
 
 - **FLIP:** **REVERSE**, **HALF SPEED** (an octave down) and **FILTER** (a low-pass). Each pad keeps its own, and SAVE KIT saves the pads flipped.
 - **VIEW:** the whole song, or 16, 4 or 1 bar around the cue.
@@ -269,7 +269,7 @@ The song's waveform with all 16 cues. Playing a pad selects it. For the selected
 | **SEARCH** (DIG and FILTERS pages) | Digs Discogs with your filters. Leave them on ANY for anything at all |
 | **FILTERS** page | Genre, style, decade, region and country, with arrows. **CLEAR FILTERS** sets them back to ANY |
 | **ROLL** (FILTERS and CRATES pages) | Picks the filters for you, searches and plays the result. MILD stays near the genre you are in; WILD picks anything |
-| **SOURCE: CHANNEL** | Digs random uploads from YouTube channels you list in `channels.txt` in the plugin's folder |
+| **SOURCE: CHANNEL** | Digs random uploads from YouTube channels you list in `channels.txt` in the plugin's folder (see below) |
 | **RESULTS** | 8 a page. Tap one to play it. **PAGE UP / PAGE DOWN** |
 | **PLAY, STOP, BACK 15, FWD 15, NEXT** | The transport |
 | **AUTO NEXT** | Moves to the next result when a track ends or won't play (on by default) |
@@ -277,6 +277,7 @@ The song's waveform with all 16 cues. Playing a pad selects it. For the selected
 
 **Good to know**
 
+- **`channels.txt`** is made the first time PotentialCrates starts: a copy of your old Crate Digger channel list if one is on the same drive, else a short how-to with examples. Write one channel a line (a channel link, an `@handle`, a `UC...` ID or a playlist link, then `|` and a name if you like). Updates never change a list with your own channels in it.
 - If a dig finds nothing, it digs again with new picks, up to 3 times.
 - The status line says why a track won't play: private video, removed, region blocked, rate limited or no network.
 - The download is large (about 70 MB for a first-generation MPC, 90 MB for a second-generation one) because it carries its own streaming engine.
@@ -292,28 +293,33 @@ The song's waveform with all 16 cues. Playing a pad selects it. For the selected
 **Quick start**
 
 1. Load PotentialKits as a plugin instrument. The first time, it scans the **Expansions** and **Samples** folders on every drive (pick another folder on the SETUP page).
-2. Tap **NEW KIT**, a **KIT STYLE** on the DIP page, or **ROLL**.
+2. On the **KIT** page tap **NEW KIT** or **ROLL**, or tap a **KIT STYLE** on the STYLES page.
 3. Play the pads, or tap a tile on the KIT page to hear it.
-4. **LOCK** the pads you like and dip again. When the kit is right, tap **EXPORT KIT**.
+4. **LOCK** the pads you like and roll again. When the kit is right, open the **SAVE** page and tap **EXPORT KIT**.
 
 **Pages**
 
 | Page | What's on it |
 |---|---|
-| **KIT** | **NEW KIT**; the 16 pad tiles, laid out like the MPC's pads (A01 bottom left; `*` = locked); the selected pad: **LOCK**, **PLAY**, **REROLL**, **CLEAR**, **GAIN**, **PITCH** (±12 semitones), **DECAY** (100 % = the whole sample), **CHOKE** (OFF or group 1-4), **FAVOURITE**, **REJECT** |
-| **DIP** | **KIT STYLES** (CLASSIC, BOOM BAP, LO-FI, TRAP, HOUSE, DUSTY JAZZ, PERCUSSION, ELECTRO, WEIRD), **ROLL** with MILD / MEDIUM / WILD, **USER KITS**, and **NEW KIT**, **CLEAR ALL**, **UNLOCK ALL**, **MATCH LEVELS**, **EXPORT KIT** |
-| **POOL** | What the selected pad draws from: 23 sounds in drums, metals, tonal and texture. **FOLLOW PLAYED PAD** |
-| **SETUP** | Sample and export folders, **RESCAN**, copy or link samples, **SKIP LOOPS**, **NO DUPLICATES**, **MAX SIZE**, and the LOOK |
+| **KIT** | **NEW KIT**, **ROLL**, the 16 pad tiles, laid out like the MPC's pads (A01 bottom left; `*` = locked), and the selected pad: its sample, **TYPE**, **LOCK**, **REROLL**, **GAIN**, **PITCH** (±12 semitones), **DECAY** (100 % = the whole sample) and **CHOKE** (OFF or group 1-4) |
+| **STYLES** | **KIT STYLES** (CLASSIC, BOOM BAP, LO-FI, TRAP, HOUSE, DUSTY JAZZ, PERCUSSION, ELECTRO, WEIRD), **ROLL KIT** with MILD / MEDIUM / WILD, **UNLOCK ALL**, **CLEAR ALL** |
+| **SAVE** | **USER KITS** (tap **SAVE**, then a slot), **EXPORT KIT**, **MATCH LEVELS**, and a status line ("Saved to USER 3") |
+| **SETUP** | Sample and export folders, **RESCAN**, copy or link samples, **SKIP LOOPS**, **NO DUPLICATES**, **FOLLOW PLAYED PAD**, **MAX SIZE**, and the LOOK |
 
-**Kit styles** set what each pad draws from, its pitch, decay and choke, then dip. Locked pads are left alone. **ROLL:** MILD gives up to four pads a new sample; MEDIUM makes a new kit with a little pitch and decay; WILD also mixes up what the pads draw from.
+**TYPE** is what the selected pad draws from: tap the arrows to step through AUTO (the pad's usual sound) and 23 types: KICK, SNARE, RIM, CLAP, HAT, CLOSED HAT, OPEN HAT, TOM, CONGA, PERCUSSION, CRASH, RIDE, CYMBAL, FX, GLITCH, VOX, BASS, SYNTH, STAB, CHORD, LEAD, PAD and OTHER. The pad gets a new sound of that type straight away.
 
-**Exported kits** are normal MPC drum programs (`.xpm`) with the 16 sounds on pads A01-A16, in `PotentialKits/Kits` at the top of the plugin's drive by default. Pads with PITCH, DECAY or GAIN changed are written as you hear them (new WAV files); CHOKE becomes the program's mute groups. With LINK TO ORIGINALS the samples stay where they are and PITCH is set on the pad instead.
+**Kit styles** set what each pad draws from, its pitch, decay and choke, then pick a kit. Locked pads are left alone. **ROLL:** MILD gives up to four pads a new sample; MEDIUM makes a new kit with a little pitch and decay; WILD also mixes up what the pads draw from.
 
-**Q-Links:** GAIN, PITCH, DECAY and CHOKE of the selected pad (KIT page).
+**Exported kits** are normal MPC drum programs (`.xpm`) with the 16 sounds on pads A01-A16, in `PotentialKits/Kits` at the top of the plugin's drive by default. Pads with PITCH, DECAY or GAIN changed are written as you hear them (new WAV files); CHOKE becomes the program's mute groups. With LINK TO ORIGINALS the samples stay where they are and PITCH is set on the pad instead. An MP3 pad is always written as a WAV, because the MPC loads WAVs beside a program.
+
+**Q-Links:** GAIN, PITCH, DECAY and CHOKE of the selected pad (KIT page); the ROLL setting (STYLES page); NO DUPLICATES, SKIP LOOPS, MAX SIZE and copy or link (SETUP page).
 
 **Good to know**
 
-- Samples are sorted by their folder and file names (a folder called `Kicks` holds kicks). FAVOURITE makes a sample twice as likely; REJECT means never again (undo it in `data/prefs.txt`).
+- Reads **WAV** (8, 16, 24 and 32-bit, float, mono or stereo, any sample rate), **AIFF** and **MP3**.
+- Samples are sorted by their folder and file names (a folder called `Kicks` holds kicks).
+- For a drums-only source, use **MAKE DRUM FOLDER** in MPC TOOLS (1.5.9 or later): it copies the drum and percussion one-shots from every drive into `DRUM ONE SHOTS` on the SD card, already in Kicks, Snares, Hats and so on folders. Then pick `DRUM ONE SHOTS` on the SETUP page and tap **RESCAN**.
+- Favourites and rejects carried over from Lucky Dip live in `data/prefs.txt` in the plugin's folder (edit it to undo a reject); the buttons for them are no longer on the screen.
 - Pads are one-shots, one voice each. Very long files are cut to 15 seconds.
 - Your project remembers the kit, locks and settings, but not the samples themselves: a moved sample shows `!` on its tile.
 
@@ -612,7 +618,7 @@ Patina, Punch, Heat, Grit and Bleed each have a **USER** page with eight slots o
 
 | To | Do this |
 |---|---|
-| **Save** | Tap **SAVE** (it lights and reads NOW TAP A SLOT), then tap a slot |
+| **Save** | Tap **SAVE** (it lights and reads NOW TAP A SLOT, and stays lit until you tap a slot), then tap a slot, empty or full |
 | **Load** | Tap a slot |
 | **Cancel a save** | Tap SAVE again |
 
@@ -622,7 +628,7 @@ Patina, Punch, Heat, Grit and Bleed each have a **USER** page with eight slots o
 
 **What a slot keeps:** the knobs and switches that make the sound. In Grit, the effect that is on and the settings of all seven. It does not keep the ROLL setting, the look, the built-in preset's highlight (Punch and Heat) or Bleed's LISTEN switch.
 
-**PotentialKits** has the same thing for whole kits: **USER KITS** on its DIP page keep the samples, locks, sounds, pitch, decay and choke of all 16 pads, in `PotentialSuite Presets/PotentialKits/`.
+**PotentialKits** has the same thing for whole kits: **USER KITS** on its SAVE page keep the samples, locks, sounds, pitch, decay and choke of all 16 pads, in `PotentialSuite Presets/PotentialKits/`.
 
 **Where the slots live:** on the drive the plugin is on, in a folder called `PotentialSuite Presets` beside `VST2 Plugins`, one small text file per plugin. So:
 
@@ -647,16 +653,19 @@ A new look shows the next time the plugin loads. Take the plugin off the track a
 MPC TOOLS before 1.5.6 replaced the whole plugin folder. Update MPC TOOLS, then pick the look again.
 
 **PotentialKits says No samples found.**
-It scans the Expansions and Samples folders at the top of each drive. Pick your sample folder on its SETUP page and tap **RESCAN**. Samples must be WAV or AIFF.
+It scans the Expansions and Samples folders at the top of each drive. Pick your sample folder on its SETUP page and tap **RESCAN**. Samples must be WAV, AIFF or MP3.
 
 **PotentialBreaks says NO BREAKS FOUND, or PotentialWax finds no songs.**
-Check the folder name and place (chapters 4.1 and 4.2), then tap **RESCAN**. Breaks reads WAV and FLAC; Wax reads MP3, WAV and FLAC.
+Check the folder name and place (chapters 4.1 and 4.2), then tap **RESCAN**. Breaks and Wax both read WAV, FLAC and MP3.
 
 **Pad 1 does not play the first slice or cue.**
 The MPC treats a plugin track like a keyboard, so the pads can send different notes. Tap **LEARN**, then hit the pad you want as pad 1.
 
 **The tempo is double or half.**
 Put the BPM in the file name (`Funky Drummer 101bpm.wav`). In Wax, use ÷2 or ×2.
+
+**PotentialCrates says to add channels to channels.txt.**
+Open `channels.txt` in the plugin's folder (on a computer, or copy it over with MPC TOOLS' File Browser) and add your channels, one a line. PotentialCrates 1.1.2 and later make the file for you, from an old Crate Digger list if it finds one.
 
 **PotentialCrates plays nothing.**
 Check the network first, then read the status line: it says why (private, removed, region blocked, rate limited).
@@ -665,7 +674,7 @@ Check the network first, then read the status line: it says why (private, remove
 Patina adds about 7 ms of delay. Put it on the bus so everything moves together.
 
 **A USER slot did not save.**
-Wait three seconds after the plugin or project loads before tapping slots: taps are ignored for a moment so that loading a project cannot change a slot. Check that the drive is not full or read-only.
+Update the plugin first: before the versions of 14 November 2026 (Patina 1.5.1, Punch 1.5.1, Heat 1.4.1, Grit 1.1.2, Bleed 1.1.1, Kits 1.1.0) one tap on SAVE could switch it straight back off. Then wait three seconds after the plugin or project loads before tapping slots: taps are ignored for a moment so that loading a project cannot change a slot. Check that the drive is not full or read-only.
 
 **The chain does not sound like I expected.**
 Check the insert order, check the same preset name is picked in every plugin of the chain, and match the level with OUTPUT.
@@ -922,6 +931,7 @@ if (r) return;
 | `<drive>/PotentialSuite Presets/PotentialKits/` | Kits | USER KITS |
 | `<plugin folder>/channels.txt` | You | Crates' YouTube channels. Listed as `user_data` in `mpc-plugin.json`, so installers keep it |
 | `<drive>/Potential-backup-<date>/` | MPC TOOLS | Old copies moved aside by an update |
+| `<SD card>/DRUM ONE SHOTS/` | MPC TOOLS | Drum and percussion one-shots from every drive, in Kicks, Snares, Claps, Hats, Cymbals, Toms and Percs (MAKE DRUM FOLDER). `.drumsort/index.tsv` remembers what was checked |
 
 ## 16. Building, testing and releasing
 
