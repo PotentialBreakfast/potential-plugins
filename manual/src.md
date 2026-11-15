@@ -106,9 +106,9 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
-### Three looks
+### Four looks
 
-Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour Block**. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all three. Potential1200 has a fourth look, **Vintage** (its default): a warm grey panel, cream keys and an amber display.
+Every plugin comes in **Print Plate** (the default), **Night Rack**, **Colour Block** and **Vintage**: a late-80s drum machine with a warm grey panel, cream keys and an amber display, in the plugin's own colour. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all four. Vintage is Potential1200's own look, and its default.
 
 ### ROLL
 
@@ -215,7 +215,7 @@ Every setting is saved with your MPC project and comes back when you load it. Br
 
 **WAVE page**
 
-The song's waveform with all 16 cues. Playing a pad selects it. While a pad plays, the playhead (a bright line with a notch at the top and bottom) moves along the waveform and the part already played lights up in Wax's colour. For the selected pad:
+The song's waveform, drawn as 128 thin bars, with all 16 cues. Playing a pad selects it. While a pad plays, the playhead (a bright line with a notch at the top and bottom) moves along the waveform and the part already played lights up in Wax's colour. For the selected pad:
 
 - **FLIP:** **REVERSE**, **HALF SPEED** (an octave down) and **FILTER** (a low-pass). Each pad keeps its own, and SAVE KIT saves the pads flipped.
 - **VIEW:** the whole song, or 16, 4 or 1 bar around the cue.
@@ -756,7 +756,7 @@ Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's o
 | **Wrapper** | The kit's `wrapper/vst2_wrap.c` | Turns the engine into a VST2 plugin: parameters, state chunk, MIDI, audio blocks |
 | **Parameters** | `vst/params.json`, `vst/params.lock` | The parameter list, in VST index order. The kit generates `params.h` from it |
 | **Layout** | `vst/layout.base.conf` | Where every control sits on each tab |
-| **Looks** | `shared/looks/`, `vst/skin/looks/` | Turns the one layout into three skins and merges them |
+| **Looks** | `shared/looks/`, `vst/skin/looks/` | Turns the one layout into four skins and merges them |
 | **Shared headers** | `shared/` | The same files in every repo: look switch, USER slots, MANUAL page |
 
 ### Repositories
@@ -887,15 +887,15 @@ A button key used on several pages shares one image, so it must be the same size
 
 ### The looks
 
-`shared/looks/make_looks.py vst` writes `layout.conf` (Print Plate), `layout.rack.conf` (Night Rack) and `layout.block.conf` (Colour Block) from the base layout, adding each look's palette and the plugin's own colour from `vst/skin/looks/plugin.json`:
+`shared/looks/make_looks.py vst` writes `layout.conf` (Print Plate), `layout.rack.conf` (Night Rack), `layout.block.conf` (Colour Block) and `layout.vintage.conf` (Vintage) from the base layout, adding each look's palette and the plugin's own colour from `vst/skin/looks/plugin.json`:
 
 ```json
 {"name": "PotentialPunch",
- "accent": {"print": "2d5be3", "rack": "7c9bff", "block": "6f93ff"},
+ "accent": {"print": "2d5be3", "rack": "7c9bff", "block": "6f93ff", "vintage": "2d5be3"},
  "hero": ["attack", "sustain"]}
 ```
 
-It also appends the **MANUAL** tab (from `vst/manual.txt`) and the **SETTINGS** tab with the LOOK selector. `shared/looks/build_looks.py vst <kit>` builds all three with the kit's `gen_vst.py` and merges them with `make_skinset.py`.
+It also appends the **MANUAL** tab (from `vst/manual.txt`) and the **SETTINGS** tab with the LOOK selector. `shared/looks/build_looks.py vst <kit>` builds all four with the kit's `gen_vst.py` and merges them with `make_skinset.py`.
 
 **Switching looks.** MPC reads a skin only when a plugin loads. `shared/looks/potential_theme.h` copies the chosen look's `TUI.json` and Q-Link maps into `Plugin Skins/` and writes the look's name to `Plugin Skins/ui.txt`; the new look shows on the next load.
 
@@ -992,7 +992,7 @@ git clone https://github.com/open-mpc/mpc-vst-plugins
 git clone https://github.com/PotentialBreakfast/mpc-vst-potentialpunch
 K=$PWD/mpc-vst-plugins; P=$PWD/mpc-vst-potentialpunch
 
-# 1. the three looks' skins and params.h
+# 1. the four looks' skins and params.h
 python3 $P/shared/looks/build_looks.py $P/vst $K
 
 # 2. test on your computer (x86, AddressSanitizer)

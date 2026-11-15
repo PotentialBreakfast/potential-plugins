@@ -86,18 +86,18 @@ A beat usually moves through the suite in this order:
 
 | Plugin | Version | Type |
 |---|---|---|
-| **PotentialBreaks** | 1.7.0 | Instrument |
-| **PotentialWax** | 1.8.0 | Instrument |
-| **PotentialCrates** | 1.1.2 | Instrument |
-| **PotentialKits** | 1.1.1 | Instrument |
-| **Potential1200** | 1.0.1 | Instrument |
-| **PotentialNoise** | 2.4.0 | Instrument |
-| **PotentialPatina** | 1.5.1 | Insert effect |
-| **PotentialPunch** | 1.5.1 | Insert effect |
-| **PotentialHeat** | 1.4.1 | Insert effect |
-| **PotentialGrit** | 1.1.2 | Insert effect |
-| **PotentialBleed** | 1.1.1 | Insert effect |
-| **PotentialWarp** | 1.3.0 | Insert effect |
+| **PotentialBreaks** | 1.8.0 | Instrument |
+| **PotentialWax** | 1.9.0 | Instrument |
+| **PotentialCrates** | 1.2.0 | Instrument |
+| **PotentialKits** | 1.2.0 | Instrument |
+| **Potential1200** | 1.0.2 | Instrument |
+| **PotentialNoise** | 2.5.0 | Instrument |
+| **PotentialPatina** | 1.6.0 | Insert effect |
+| **PotentialPunch** | 1.6.0 | Insert effect |
+| **PotentialHeat** | 1.5.0 | Insert effect |
+| **PotentialGrit** | 1.2.0 | Insert effect |
+| **PotentialBleed** | 1.2.0 | Insert effect |
+| **PotentialWarp** | 1.4.0 | Insert effect |
 | **MPC TOOLS** | 1.5.9 | Companion app (Windows, Mac) |
 
 ## 2. Getting started
@@ -155,9 +155,9 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
-### Three looks
+### Four looks
 
-Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour Block**. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all three. Potential1200 has a fourth look, **Vintage** (its default): a warm grey panel, cream keys and an amber display.
+Every plugin comes in **Print Plate** (the default), **Night Rack**, **Colour Block** and **Vintage**: a late-80s drum machine with a warm grey panel, cream keys and an amber display, in the plugin's own colour. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all four. Vintage is Potential1200's own look, and its default.
 
 ### ROLL
 
@@ -264,7 +264,7 @@ Every setting is saved with your MPC project and comes back when you load it. Br
 
 **WAVE page**
 
-The song's waveform with all 16 cues. Playing a pad selects it. While a pad plays, the playhead (a bright line with a notch at the top and bottom) moves along the waveform and the part already played lights up in Wax's colour. For the selected pad:
+The song's waveform, drawn as 128 thin bars, with all 16 cues. Playing a pad selects it. While a pad plays, the playhead (a bright line with a notch at the top and bottom) moves along the waveform and the part already played lights up in Wax's colour. For the selected pad:
 
 - **FLIP:** **REVERSE**, **HALF SPEED** (an octave down) and **FILTER** (a low-pass). Each pad keeps its own, and SAVE KIT saves the pads flipped.
 - **VIEW:** the whole song, or 16, 4 or 1 bar around the cue.
@@ -789,7 +789,7 @@ Each plugin's GitHub page has an issue form. Short reports are fine: "the PITCH 
 | **PotentialWax** | MPC Key 37 (MPC OS 3.10.1); MPC Live (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialCrates** | MPC One (MPC OS 3.10.1) |
 | **PotentialKits** | MPC One (MPC OS 3.10.1) |
-| **Potential1200** | MPC One (run by the author; not yet recorded) |
+| **Potential1200** | MPC One (MPC OS 3.10.1) |
 | **PotentialNoise** | MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPatina** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
 | **PotentialPunch** | MPC Key 37 (MPC OS 3.10.1); MPC One (HAKAI 3.10, MPC OS 3.10.1) |
@@ -806,18 +806,18 @@ Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' 
 
 | Plugin and version | 99th percentile | Worst block |
 |---|---|---|
-| **PotentialBreaks** 1.7.0 | 1.5 % | 2.7 % |
-| **PotentialWax** 1.8.0 | 5.5 % | 7.2 % |
-| **PotentialCrates** 1.1.2 | 1.2 % | 4.0 % |
-| **PotentialKits** 1.1.1 | 3.3 % | 7.0 % |
-| **Potential1200** | not measured yet |  |
-| **PotentialNoise** 2.4.0 | 1.7 % | 2.3 % |
-| **PotentialPatina** 1.5.1 | 6.4 % | 7.3 % |
+| **PotentialBreaks** 1.7.0 | 1.5 % | 2.5 % |
+| **PotentialWax** 1.8.0 | 5.7 % | 6.9 % |
+| **PotentialCrates** 1.1.2 | 1.0 % | 3.9 % |
+| **PotentialKits** 1.1.1 | 3.2 % | 6.9 % |
+| **Potential1200** 1.0.1 | 7.3 % | 11.0 % |
+| **PotentialNoise** 2.4.0 | 1.6 % | 2.5 % |
+| **PotentialPatina** 1.5.1 | 6.4 % | 7.7 % |
 | **PotentialPunch** 1.5.1 | 3.3 % | 4.7 % |
-| **PotentialHeat** 1.4.1 | 6.0 % | 8.0 % |
-| **PotentialGrit** 1.1.2 | 3.0 % | 3.8 % |
-| **PotentialBleed** 1.1.1 | 3.5 % | 4.7 % |
-| **PotentialWarp** 1.3.0 | 4.7 % | 6.9 % |
+| **PotentialHeat** 1.4.1 | 5.9 % | 6.6 % |
+| **PotentialGrit** 1.1.2 | 3.2 % | 4.6 % |
+| **PotentialBleed** 1.1.1 | 3.3 % | 4.6 % |
+| **PotentialWarp** 1.3.0 | 4.6 % | 7.0 % |
 
 # Part 2: Developer reference
 
@@ -831,7 +831,7 @@ Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's o
 | **Wrapper** | The kit's `wrapper/vst2_wrap.c` | Turns the engine into a VST2 plugin: parameters, state chunk, MIDI, audio blocks |
 | **Parameters** | `vst/params.json`, `vst/params.lock` | The parameter list, in VST index order. The kit generates `params.h` from it |
 | **Layout** | `vst/layout.base.conf` | Where every control sits on each tab |
-| **Looks** | `shared/looks/`, `vst/skin/looks/` | Turns the one layout into three skins and merges them |
+| **Looks** | `shared/looks/`, `vst/skin/looks/` | Turns the one layout into four skins and merges them |
 | **Shared headers** | `shared/` | The same files in every repo: look switch, USER slots, MANUAL page |
 
 ### Repositories
@@ -962,15 +962,15 @@ A button key used on several pages shares one image, so it must be the same size
 
 ### The looks
 
-`shared/looks/make_looks.py vst` writes `layout.conf` (Print Plate), `layout.rack.conf` (Night Rack) and `layout.block.conf` (Colour Block) from the base layout, adding each look's palette and the plugin's own colour from `vst/skin/looks/plugin.json`:
+`shared/looks/make_looks.py vst` writes `layout.conf` (Print Plate), `layout.rack.conf` (Night Rack), `layout.block.conf` (Colour Block) and `layout.vintage.conf` (Vintage) from the base layout, adding each look's palette and the plugin's own colour from `vst/skin/looks/plugin.json`:
 
 ```json
 {"name": "PotentialPunch",
- "accent": {"print": "2d5be3", "rack": "7c9bff", "block": "6f93ff"},
+ "accent": {"print": "2d5be3", "rack": "7c9bff", "block": "6f93ff", "vintage": "2d5be3"},
  "hero": ["attack", "sustain"]}
 ```
 
-It also appends the **MANUAL** tab (from `vst/manual.txt`) and the **SETTINGS** tab with the LOOK selector. `shared/looks/build_looks.py vst <kit>` builds all three with the kit's `gen_vst.py` and merges them with `make_skinset.py`.
+It also appends the **MANUAL** tab (from `vst/manual.txt`) and the **SETTINGS** tab with the LOOK selector. `shared/looks/build_looks.py vst <kit>` builds all four with the kit's `gen_vst.py` and merges them with `make_skinset.py`.
 
 **Switching looks.** MPC reads a skin only when a plugin loads. `shared/looks/potential_theme.h` copies the chosen look's `TUI.json` and Q-Link maps into `Plugin Skins/` and writes the look's name to `Plugin Skins/ui.txt`; the new look shows on the next load.
 
@@ -1142,7 +1142,7 @@ git clone https://github.com/open-mpc/mpc-vst-plugins
 git clone https://github.com/PotentialBreakfast/mpc-vst-potentialpunch
 K=$PWD/mpc-vst-plugins; P=$PWD/mpc-vst-potentialpunch
 
-# 1. the three looks' skins and params.h
+# 1. the four looks' skins and params.h
 python3 $P/shared/looks/build_looks.py $P/vst $K
 
 # 2. test on your computer (x86, AddressSanitizer)
@@ -1239,7 +1239,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 19 | `base_note` | Pad 1 Note | 0 to 111 | 36 |  |
 | 20 | `rescan` | Rescan Folders |  |  | trigger |
 | 21 | `random_break` | Random Break |  |  | trigger |
-| 22 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 22 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 23 | `save_kit` | Save Kit |  |  | trigger |
 | 24 | `dice` | Roll |  |  | trigger |
 | 25 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
@@ -1252,7 +1252,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 
 ## PotentialWax
 
-134 parameters.
+198 parameters.
 
 | # | Key | Name | Range or options | Default | Kind |
 |---|---|---|---|---|---|
@@ -1308,7 +1308,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 121 | `snap_cue` | Snap Cue To Hit |  |  | trigger |
 | 122 | `reset_cue` | Reset Cue |  |  | trigger |
 | 123 | `random_track` | Random Track |  |  | trigger |
-| 124 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 124 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 125 | `dice` | Roll |  |  | trigger |
 | 126 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 127 | `save_kit` | Save Kit |  |  | trigger |
@@ -1318,6 +1318,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 131 | `flip_half` | Pad Half Speed | Off, On | Off |  |
 | 132 | `flip_filt` | Pad Filter | Off, On | Off |  |
 | 133 | `manual_page` | Manual Page | START, CONTROLS, MATCH, WAVE, SAVING, SUITE, HELP | START |  |
+| 134–197 | `w_64` … `w_127` | Wave 65 … Wave 128 | 0 to 1 | 0 |  |
 
 ## PotentialCrates
 
@@ -1364,7 +1365,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 43 | `sync` | Transport Sync | Off, On | Off |  |
 | 44 | `auto_next` | Auto Next | Off, On | On |  |
 | 45 | `volume` | Volume | -24 to 12 dB | 0 |  |
-| 46 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 46 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 47–54 | `res_1` … `res_8` | Result 1 … Result 8 |  |  | slot |
 | 55 | `manual_page` | Manual Page | START, CRATES, DIG, SAMPLING, SUITE, HELP | START |  |
 
@@ -1542,7 +1543,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 180–188 | `style_1` … `style_9` | Kit Style 1 … Kit Style 9 |  |  | trigger |
 | 189 | `dice` | Roll |  |  | trigger |
 | 190 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
-| 191 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 191 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 192 | `user_save` | Save User Kit | OFF, ON | OFF |  |
 | 193–200 | `user_1` … `user_8` | User Kit 1 … User Kit 8 |  |  | slot |
 | 201 | `sel_pill` | Pad Sound | 0 to 0 |  | text |
@@ -1627,7 +1628,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 6 | `clear_peak` | Clear peak |  |  | trigger |
 | 7 | `meter` | Meter | 0 … 30 (31 options) | 0 |  |
 | 8 | `noise_on` | Noise | OFF, ON | OFF |  |
-| 9 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 9 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 10 | `guide_next` | Guide Next |  |  | trigger |
 | 11 | `guide_back` | Guide Back |  |  | trigger |
 | 12 | `guide_order` | Guide Order | DRUMS FIRST, SAMPLE FIRST | DRUMS FIRST |  |
@@ -1666,7 +1667,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 17 | `space_on` | Space | Off, On | Off |  |
 | 18 | `space_amt` | Space Amount | 0 to 100 % | 18 |  |
 | 19 | `space_size` | Space Size | 0 to 100 % | 50 |  |
-| 20 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 20 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 21 | `dice` | Roll |  |  | trigger |
 | 22 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 23 | `era` | Era | PATINA, '50s 78, '60s 45, '70s TAPE, '80s SAMPLER, '90s CASSETTE, AM RADIO, VHS | PATINA |  |
@@ -1693,7 +1694,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 8 | `reading` | Tip |  |  | text |
 | 9 | `meter` | Meter | 0 … 30 (31 options) | 15 |  |
 | 10 | `preset_pick` | Preset | Punchy Drums … Dub Drums (19 options) | Punchy Drums |  |
-| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 12 | `dice` | Roll |  |  | trigger |
 | 13 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 14 | `match` | Auto Level | OFF, ON | ON |  |
@@ -1718,7 +1719,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 8 | `reading` | Tip |  |  | text |
 | 9 | `meter` | Meter | 0 … 30 (31 options) | 0 |  |
 | 10 | `preset_pick` | Preset | Warm Drums … Glue Bus (16 options) | Warm Drums |  |
-| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 12 | `dice` | Roll |  |  | trigger |
 | 13 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 14 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1756,7 +1757,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 22 | `ring_freq` | Ring Freq | 0 to 100 | 62 |  |
 | 23 | `ring_sweep` | Ring Sweep | 0 to 100 % | 0 |  |
 | 24 | `ring_speed` | Ring Speed | 0 to 100 | 43 |  |
-| 25 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 25 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 26 | `dice` | Roll |  |  | trigger |
 | 27 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 28 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1781,7 +1782,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 9 | `tick` | Tick | 0 to 100 % | 15 |  |
 | 10 | `drift` | Drift | 0 to 100 % | 15 |  |
 | 11 | `listen` | Listen | Off, On | Off |  |
-| 12 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 12 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 13 | `dice` | Roll |  |  | trigger |
 | 14 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 15 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1802,7 +1803,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 5 | `mix` | Mix | 0 to 100 % | 100 |  |
 | 6 | `output` | Output | -12 to 6 dB | 0 |  |
 | 7 | `step` | Step | 0 … 16 (17 options) | 0 |  |
-| 8 | `theme` | Look | Print Plate, Night Rack, Colour Block | Print Plate |  |
+| 8 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
 | 9 | `edit_step` | Edit Step | 1 … 16 (16 options) | 1 |  |
 | 10 | `move` | Step Move | STRAIGHT … REPEAT 1/32T (15 options) | STRAIGHT |  |
 | 11 | `dice` | Dice Pattern |  |  | trigger |
