@@ -18,7 +18,7 @@ The newest copy of this manual is at [github.com/PotentialBreakfast/potential-pl
 
 ## 1. The suite at a glance
 
-PotentialSuite is eleven plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
+PotentialSuite is twelve plugins that run inside the MPC like its own instruments and effects. Each has its own touchscreen pages, works with the Q-Links and is saved with your project. No computer is needed while you play.
 
 | Plugin | Loads as | What it is |
 |---|---|---|
@@ -26,6 +26,7 @@ PotentialSuite is eleven plugins that run inside the MPC like its own instrument
 | **PotentialWax** | Instrument | Melodic sampler: songs and loops on 16 pads, with tempo and key matched |
 | **PotentialCrates** | Instrument | Record digger: finds records on Discogs and streams one into your track (needs a network connection) |
 | **PotentialKits** | Instrument | Drum-kit builder: 16 sounds from your own sample folders, with kit styles, ROLL, and pitch, decay and choke per pad |
+| **Potential1200** | Instrument | 12-bit drum sampler in the late-80s style: 8 faders and 8 pads, one-shots or a chopped break, drop-sample pitch and the classic filters |
 | **PotentialNoise** | Instrument | Mixing tool: calibrated pink noise, test tones and a speaker check |
 | **PotentialPatina** | Insert&nbsp;effect | Retro colour: vinyl and tape noise, wobble, drive, bit-crush, tone and room |
 | **PotentialPunch** | Insert&nbsp;effect | Transient shaper: more or less attack and sustain |
@@ -40,8 +41,8 @@ PotentialSuite is eleven plugins that run inside the MPC like its own instrument
 
 A beat usually moves through the suite in this order:
 
-1. **Dig.** PotentialCrates finds a record. PotentialBreaks, PotentialWax and PotentialKits dig through your own folders.
-2. **Chop and build.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key. Kits builds a drum kit from your one-shots.
+1. **Dig.** PotentialCrates finds a record. PotentialBreaks, PotentialWax, PotentialKits and Potential1200 dig through your own folders.
+2. **Chop and build.** Breaks slices drums across the pads. Wax puts 16 cues on a song and matches its tempo and key. Kits builds a drum kit from your one-shots. Potential1200 plays one-shots or a break through a 12-bit, 26 kHz sampler with 8 faders.
 3. **Colour.** Punch, Grit, Bleed and Patina shape and age the sound. Four ready-made chains set them up together (chapter 6).
 4. **Glue and bend.** Heat warms a bus and catches peaks. Warp adds half time, tape stops and stutters in time.
 5. **Balance.** PotentialNoise gives you a quick, neutral rough mix.
@@ -100,18 +101,18 @@ The plugins themselves never open a network connection, except PotentialCrates, 
 Each plugin has tabs along the top of its screen. The first is the main page. Every plugin also has:
 
 - **MANUAL**: the plugin's own manual, a few pages of text with page buttons along the top.
-- **SETTINGS** (SETUP in PotentialWax): the LOOK selector.
+- **SETTINGS** (SETUP in PotentialWax and Potential1200): the LOOK selector.
 - **USER** (Patina, Punch, Heat, Grit and Bleed): eight preset slots of your own (chapter 7). PotentialKits has eight USER KITS on its SAVE page.
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
 ### Three looks
 
-Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour Block**. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all three.
+Every plugin comes in **Print Plate** (the default), **Night Rack** and **Colour Block**. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all three. Potential1200 has a fourth look, **Vintage** (its default): a warm grey panel, cream keys and an amber display.
 
 ### ROLL
 
-**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters. In Kits it rolls new samples, and at MEDIUM and WILD pitch and decay too.
+**ROLL** is a dice button: one tap for a random setting that still sounds good. **MILD**, **MEDIUM** or **WILD** next to it sets how far it goes. Keep rolling until you like something, then fine-tune. In Breaks and Wax, ROLL also picks a random break or song. In Crates it picks the search filters. In Kits it rolls new samples, and at MEDIUM and WILD pitch and decay too. In Potential1200 it changes the unlocked pads' sounds and settings.
 
 ### Presets
 
@@ -128,7 +129,7 @@ The main controls of each page are on the Q-Links. The plugin chapters list them
 
 ### Saved with your project
 
-Every setting is saved with your MPC project and comes back when you load it. Breaks and Wax also remember the break or song, the chops and the cues. The look and the USER slots are not part of a project: they belong to the MPC.
+Every setting is saved with your MPC project and comes back when you load it. Breaks, Wax and Potential1200 also remember the break or song, the chops and the cues. The look and the USER slots are not part of a project: they belong to the MPC.
 
 ## 4. The instruments
 
@@ -323,7 +324,51 @@ The song's waveform with all 16 cues. Playing a pad selects it. While a pad play
 - Pads are one-shots, one voice each. Very long files are cut to 15 seconds.
 - Your project remembers the kit, locks and settings, but not the samples themselves: a moved sample shows `!` on its tile.
 
-### 4.5 PotentialNoise
+### 4.5 Potential1200
+
+![Potential1200](docs/images/potential1200.png)
+
+**That late-80s 12-bit drum sound.** Potential1200 puts your one-shots or a chopped break through the steps of the classic 12-bit sampler: every sound is taken at 26.04 kHz with no filter in front (the highs fold back as grit) and kept as 12 bits. Pitch works the old way: higher plays faster and shorter, lower plays slower, longer and dirtier. Eight faders and eight pads, like the original.
+
+**Quick start**
+
+1. Load Potential1200 as a plugin instrument.
+2. On the **KIT** page tap **NEW KIT** (or **ROLL**), then play pads 1-8.
+3. On **PERFORM** tap **TUNE**, **DECAY**, **LEVEL** or **FILTER**: the 8 faders jump to that setting of each pad.
+4. For a break, tap **BREAK** on the KIT page, then **RANDOM BREAK**.
+5. When it's right, tap **SAVE KIT** on SETUP.
+
+**Pages**
+
+| Page | What's on it |
+|---|---|
+| **PERFORM** | The 8 faders (TUNE ±12 semitones, DECAY, LEVEL or FILTER of each pad), the 8 pad tiles and a two-line display |
+| **PROGRAM** | The selected pad: TUNE, DECAY, LEVEL, CUTOFF, FILTER (DYNAMIC, FIXED, OFF), **STRETCH**, **REVERSE**, CHOKE group, and START / END trim |
+| **KIT** | **ONE-SHOTS**: each pad's type (KICK, SNARE, HAT, OPEN HAT, CLAP, PERC, TOM, CYMBAL), its sound with < > arrows, and L to lock it. **BREAK**: the break's waveform with numbered lines where each pad's chop starts and a moving playhead, RANDOM BREAK, PREV, NEXT, LIBRARY, CHOP (ON THE BEAT or ON THE HITS), TEMPO (AS IS, MATCH (TUNE), MATCH (STRETCH)), PLAY WHOLE BREAK and SHUFFLE PADS. **NEW KIT**, **ROLL** with MILD / MEDIUM / WILD, and **UNLOCK ALL** on both |
+| **SETUP** | SAMPLE SPEED (33 or **45 > 33**), CHARACTER (**12 BIT 26 kHz** or CLEAN), PADS 9-16 (MULTI PITCH or OFF), **SAVE KIT**, **RESCAN**, and the LOOK |
+
+**The filter, pad by pad.** Like the original, pads 1-2 start on a **DYNAMIC** 4-pole low-pass (the FILTER fader sweeps it), pads 3-6 on the **FIXED** low-pass, and pads 7-8 with the filter **OFF**. On a FIXED or OFF pad the FILTER fader shows FIXED or OFF and has nothing to move. Change any pad on the PROGRAM page.
+
+**The 45 > 33 trick.** The old way to fit more into a short sampler: sample the record at 45 rpm, then tune it back down. Here the sound is taken faster and slowed back, so it keeps its pitch and length but has fewer samples: darker and crunchier.
+
+**STRETCH** keeps a pad's length when you tune it, with a grainy, stuttery character rather than a clean modern stretch.
+
+**Pads 9-16** play the selected pad at 0, 2, 3, 5, 7, 8, 10 and 12 semitones (**MULTI PITCH**). In BREAK mode, the pad after pad 16 plays the whole break.
+
+**Where the sounds come from.** One-shots: a `DRUM ONE SHOTS` folder at the top of a drive (MPC TOOLS' **MAKE DRUM FOLDER** makes one), else the folders in `Potential1200/folders.txt`, else the drum sounds in your Expansions and Samples. Breaks: `DRUM BREAKS LIBRARY`, as for PotentialBreaks. Every break becomes **2 bars starting on a kick on the 1**, so it spreads evenly over the 8 pads: a loop file from its own first bar, a long take from a random strong kick. A 1-bar loop stays 1 bar.
+
+**SAVE KIT** writes the 8 pads as an MPC drum program (`.xpm` plus WAVs, exactly as you hear them) to `Potential1200/Kits` on the sounds drive.
+
+**Q-Links:** the 8 faders and the fader mode (PERFORM); TUNE, DECAY, LEVEL, CUTOFF, FILTER, STRETCH, REVERSE and CHOKE of the selected pad (PROGRAM); the ROLL setting, source, CHOP and TEMPO (KIT); SAMPLE SPEED, CHARACTER and PADS 9-16 (SETUP).
+
+**Good to know**
+
+- Reads **WAV**, **AIFF**, **FLAC** and **MP3**. Only the first 3 minutes of a file are read.
+- The mix is mono and each pad plays one sound at a time, like the original. CHOKE groups cut each other.
+- CHARACTER **CLEAN** turns the 12-bit, 26 kHz sound off, to hear the difference.
+- Potential1200 is an independent project, not made by or connected with the makers of the original hardware.
+
+### 4.6 PotentialNoise
 
 ![PotentialNoise](docs/images/potentialnoise.png)
 
@@ -652,6 +697,9 @@ A new look shows the next time the plugin loads. Take the plugin off the track a
 **My look went back to Print Plate after an update.**
 MPC TOOLS before 1.5.6 replaced the whole plugin folder. Update MPC TOOLS, then pick the look again.
 
+**Potential1200 says NO SOUNDS FOUND.**
+Make a drum folder with MPC TOOLS (**MAKE DRUM FOLDER**), or list your folders in `Potential1200/folders.txt`, then tap **RESCAN** on SETUP.
+
 **PotentialKits says No samples found.**
 It scans the Expansions and Samples folders at the top of each drive. Pick your sample folder on its SETUP page and tap **RESCAN**. Samples must be WAV, AIFF or MP3.
 
@@ -700,7 +748,7 @@ Measured on an MPC One (MPC OS 3.10.1) with the Open MPC bench, from MPC TOOLS' 
 
 ## 10. How a plugin is put together
 
-Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's own plugin host, with a native MPC screen skin. All ten are built with the open [Open MPC kit](https://github.com/open-mpc/mpc-vst-plugins) (`mpc-vst-plugins`, MIT).
+Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's own plugin host, with a native MPC screen skin. All twelve are built with the open [Open MPC kit](https://github.com/open-mpc/mpc-vst-plugins) (`mpc-vst-plugins`, MIT).
 
 | Layer | Where | What it does |
 |---|---|---|
@@ -715,7 +763,7 @@ Each plugin is a native **VST2** shared library for ARM Linux, loaded by MPC's o
 
 | Repository | Holds |
 |---|---|
-| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: bleed, breaks, crates, grit, heat, kits, noise, patina, punch, warp, wax |
+| `PotentialBreakfast/mpc-vst-potential<name>` | One plugin each: 1200, bleed, breaks, crates, grit, heat, kits, noise, patina, punch, warp, wax |
 | `PotentialBreakfast/potential-plugins` | The overview page, this manual, the suite FAQ and install guide |
 | `PotentialBreakfast/mpc-tools` | MPC TOOLS, the Windows and Mac companion app (Go) |
 | `open-mpc/mpc-vst-plugins` | The build kit, and the Open MPC catalogue registry |
@@ -998,7 +1046,7 @@ MPC TOOLS finds the newest release of each plugin from its GitHub releases page,
 
 ## 17. Credits and licences
 
-- All eleven plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
+- All twelve plugins and MPC TOOLS are **MIT** licensed: free to use, change and share. Third-party parts keep their own licences (`THIRD_PARTY.md` in each repo).
 - Built with the **Open MPC kit**, [mpc-vst-plugins](https://github.com/open-mpc/mpc-vst-plugins) (MIT), started by sd88me: the plugin wrapper, skin builder and installer.
 - **PotentialKits** is a fork of [Lucky Dip](https://github.com/sd88me/mpc-vst-luckydip) by sd88me (MIT), whose kit engine came from his schwung-kit-builder and force-kit-builder.
 - **PotentialCrates** is a fork of [Crate Digger](https://github.com/sd88me/mpc-vst-cratedigger) by sd88me, with a streaming engine built on Charles Vestal's [schwung-webstream](https://github.com/charlesvestal/schwung-webstream). Its engine bundle carries yt-dlp (Unlicense), ffmpeg (GPL-3.0) and Python (PSF).

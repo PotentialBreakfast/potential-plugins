@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-15 – Potential1200
+- **Potential1200** joins the suite: a 12-bit, 26 kHz drum sampler in the late-80s style with 8 faders and 8 pads, one-shots or a chopped break (2 bars from a kick on the 1, shown as a waveform), drop-sample pitch, the 45 > 33 trick, the classic filters, MULTI PITCH, SAVE KIT, and four looks with its own Vintage look first. Added to the plugin table, the screenshots, the install notes and the manual (chapter 4.5; PotentialNoise is now 4.6).
+- **MPC TOOLS 1.5.10** installs and updates it from the Plugins tab.
+
 ## 2026-11-14 – the manual brought up to date
 - **Versions covered:** Breaks 1.7.0, Wax 1.8.0, Crates 1.1.2, Kits 1.1.1, Patina 1.5.1, Punch 1.5.1, Heat 1.4.1, Grit 1.1.2, Bleed 1.1.1 and MPC TOOLS 1.5.9; tested devices and CPU figures from the newest results.
 - **PotentialKits (4.4):** rewritten for the 1.1 pages (KIT, STYLES, SAVE, SETUP). The POOL and DIP pages are gone: **TYPE** on the KIT page picks what a pad plays; PLAY, CLEAR, FAVOURITE and REJECT are off the screen. New KIT page picture.
