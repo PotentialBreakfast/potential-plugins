@@ -69,7 +69,7 @@ Rules of thumb:
 
 | | |
 |---|---|
-| **Tested on** | MPC One (Gen1) on HAKAI 3.10 and on MPC OS 3.10.1 with Akai's plugin folder. PotentialWax also on an MPC Live; PotentialPatina, PotentialPunch and PotentialWax also on an MPC Key 37 (MPC OS 3.10.1) |
+| **Tested on** | MPC One (Gen1) on HAKAI 3.10 and on MPC OS 3.10.1 with Akai's plugin folder; also on the latest HAKAI firmware (USB-boot method). PotentialWax also on an MPC Live; PotentialPatina, PotentialPunch and PotentialWax also on an MPC Key 37 (MPC OS 3.10.1) |
 | **Should work on** | Any standalone MPC on **MPC OS 3.10.1 or later**, 32-bit and 64-bit. Also Gen1 MPCs on older MPC OS 3.x with the community set-up |
 | **Not supported** | **MPC OS 2.x** |
 
