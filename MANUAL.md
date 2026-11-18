@@ -155,9 +155,9 @@ Each plugin has tabs along the top of its screen. The first is the main page. Ev
 
 ![The MANUAL page in PotentialPunch](manual/images/manual-page.png)
 
-### Four looks
+### Five looks
 
-Every plugin comes in **Print Plate** (the default), **Night Rack**, **Colour Block** and **Vintage**: a late-80s drum machine with a warm grey panel, cream keys and an amber display, in the plugin's own colour. Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all four. Vintage is Potential1200's own look, and its default.
+Every plugin comes in **Print Plate** (the default), **Night Rack**, **Colour Block**, **Vintage**: a late-80s drum machine with a warm grey panel, cream keys and an amber display, in the plugin's own colour, and **Hi-Fi** (PotentialBox's look: walnut cheeks, a brushed charcoal faceplate, domed knobs lit in the plugin's colour, moulded cream keys and green glass displays). Open **SETTINGS** and tap one of the LOOK keys. The new look shows the next time the plugin loads: take it off the track and add it again, or load your project again. The choice is kept on your MPC for every project. The sound and the controls are the same in all five. Vintage is Potential1200's own look, and its default.
 
 ### ROLL
 
@@ -1142,7 +1142,7 @@ git clone https://github.com/open-mpc/mpc-vst-plugins
 git clone https://github.com/PotentialBreakfast/mpc-vst-potentialpunch
 K=$PWD/mpc-vst-plugins; P=$PWD/mpc-vst-potentialpunch
 
-# 1. the four looks' skins and params.h
+# 1. the five looks' skins and params.h
 python3 $P/shared/looks/build_looks.py $P/vst $K
 
 # 2. test on your computer (x86, AddressSanitizer)
@@ -1239,7 +1239,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 19 | `base_note` | Pad 1 Note | 0 to 111 | 36 |  |
 | 20 | `rescan` | Rescan Folders |  |  | trigger |
 | 21 | `random_break` | Random Break |  |  | trigger |
-| 22 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 22 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 23 | `save_kit` | Save Kit |  |  | trigger |
 | 24 | `dice` | Roll |  |  | trigger |
 | 25 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
@@ -1308,7 +1308,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 121 | `snap_cue` | Snap Cue To Hit |  |  | trigger |
 | 122 | `reset_cue` | Reset Cue |  |  | trigger |
 | 123 | `random_track` | Random Track |  |  | trigger |
-| 124 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 124 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 125 | `dice` | Roll |  |  | trigger |
 | 126 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 127 | `save_kit` | Save Kit |  |  | trigger |
@@ -1365,7 +1365,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 43 | `sync` | Transport Sync | Off, On | Off |  |
 | 44 | `auto_next` | Auto Next | Off, On | On |  |
 | 45 | `volume` | Volume | -24 to 12 dB | 0 |  |
-| 46 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 46 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 47–54 | `res_1` … `res_8` | Result 1 … Result 8 |  |  | slot |
 | 55 | `manual_page` | Manual Page | START, CRATES, DIG, SAMPLING, SUITE, HELP | START |  |
 
@@ -1543,7 +1543,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 180–188 | `style_1` … `style_9` | Kit Style 1 … Kit Style 9 |  |  | trigger |
 | 189 | `dice` | Roll |  |  | trigger |
 | 190 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
-| 191 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 191 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 192 | `user_save` | Save User Kit | OFF, ON | OFF |  |
 | 193–200 | `user_1` … `user_8` | User Kit 1 … User Kit 8 |  |  | slot |
 | 201 | `sel_pill` | Pad Sound | 0 to 0 |  | text |
@@ -1628,7 +1628,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 6 | `clear_peak` | Clear peak |  |  | trigger |
 | 7 | `meter` | Meter | 0 … 30 (31 options) | 0 |  |
 | 8 | `noise_on` | Noise | OFF, ON | OFF |  |
-| 9 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 9 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 10 | `guide_next` | Guide Next |  |  | trigger |
 | 11 | `guide_back` | Guide Back |  |  | trigger |
 | 12 | `guide_order` | Guide Order | DRUMS FIRST, SAMPLE FIRST | DRUMS FIRST |  |
@@ -1667,7 +1667,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 17 | `space_on` | Space | Off, On | Off |  |
 | 18 | `space_amt` | Space Amount | 0 to 100 % | 18 |  |
 | 19 | `space_size` | Space Size | 0 to 100 % | 50 |  |
-| 20 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 20 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 21 | `dice` | Roll |  |  | trigger |
 | 22 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 23 | `era` | Era | PATINA, '50s 78, '60s 45, '70s TAPE, '80s SAMPLER, '90s CASSETTE, AM RADIO, VHS | PATINA |  |
@@ -1694,7 +1694,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 8 | `reading` | Tip |  |  | text |
 | 9 | `meter` | Meter | 0 … 30 (31 options) | 15 |  |
 | 10 | `preset_pick` | Preset | Punchy Drums … Dub Drums (19 options) | Punchy Drums |  |
-| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 12 | `dice` | Roll |  |  | trigger |
 | 13 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 14 | `match` | Auto Level | OFF, ON | ON |  |
@@ -1719,7 +1719,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 8 | `reading` | Tip |  |  | text |
 | 9 | `meter` | Meter | 0 … 30 (31 options) | 0 |  |
 | 10 | `preset_pick` | Preset | Warm Drums … Glue Bus (16 options) | Warm Drums |  |
-| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 11 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 12 | `dice` | Roll |  |  | trigger |
 | 13 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 14 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1757,7 +1757,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 22 | `ring_freq` | Ring Freq | 0 to 100 | 62 |  |
 | 23 | `ring_sweep` | Ring Sweep | 0 to 100 % | 0 |  |
 | 24 | `ring_speed` | Ring Speed | 0 to 100 | 43 |  |
-| 25 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 25 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 26 | `dice` | Roll |  |  | trigger |
 | 27 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 28 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1782,7 +1782,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 9 | `tick` | Tick | 0 to 100 % | 15 |  |
 | 10 | `drift` | Drift | 0 to 100 % | 15 |  |
 | 11 | `listen` | Listen | Off, On | Off |  |
-| 12 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 12 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 13 | `dice` | Roll |  |  | trigger |
 | 14 | `wild` | Roll Wildness | MILD, MEDIUM, WILD | MEDIUM |  |
 | 15 | `user_save` | Save User Preset | OFF, ON | OFF |  |
@@ -1803,7 +1803,7 @@ The **#** column is the VST parameter index. Rows marked *text* are engine text,
 | 5 | `mix` | Mix | 0 to 100 % | 100 |  |
 | 6 | `output` | Output | -12 to 6 dB | 0 |  |
 | 7 | `step` | Step | 0 … 16 (17 options) | 0 |  |
-| 8 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage | Print Plate |  |
+| 8 | `theme` | Look | Print Plate, Night Rack, Colour Block, Vintage, Hi-Fi | Print Plate |  |
 | 9 | `edit_step` | Edit Step | 1 … 16 (16 options) | 1 |  |
 | 10 | `move` | Step Move | STRAIGHT … REPEAT 1/32T (15 options) | STRAIGHT |  |
 | 11 | `dice` | Dice Pattern |  |  | trigger |

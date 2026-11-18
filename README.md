@@ -37,7 +37,7 @@ Also from me: **[MPC TOOLS](https://github.com/PotentialBreakfast/mpc-tools)**, 
 | **PotentialBleed** | **PotentialKits** | **Potential1200** |
 | ![PotentialBleed on an MPC One](docs/images/potentialbleed.png) | ![PotentialKits' KIT page](docs/images/potentialkits.png) | ![Potential1200 on an MPC One (Vintage look)](docs/images/potential1200.png) |
 
-*All in the Print Plate look except Potential1200, shown in its own Vintage look. Every plugin has all four looks (Print Plate, Night Rack, Colour Block and Vintage), switched on its SETTINGS or SETUP page.*
+*All in the Print Plate look except Potential1200, shown in its own Vintage look. Every plugin has all five looks (Print Plate, Night Rack, Colour Block, Vintage and Hi-Fi), switched on its SETTINGS or SETUP page.*
 
 ---
 

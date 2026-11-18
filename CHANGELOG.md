@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-19 – Hi-Fi everywhere
+- Every plugin now has a fifth look, **Hi-Fi** (from PotentialBox): walnut cheeks, a brushed charcoal faceplate, raised panels, domed knobs lit in the plugin's colour, moulded cream keys and green glass displays. Pick it on the LOOK selector (Bleed 1.3.0, Breaks 1.9.0, Crates 1.4.0, Grit 1.3.0, Heat 1.6.0, Kits 1.3.0, Noise 2.6.0, Patina 1.7.0, Punch 1.7.0, Warp 1.5.0, Wax 1.9.1, Potential1200 1.1.0).
+
 ## 2026-11-15 – Vintage everywhere
 - Every plugin now has a fourth look, **Vintage**, and the manual covers the new versions (Bleed 1.2.0, Breaks 1.8.0, Crates 1.2.0, Grit 1.2.0, Heat 1.5.0, Kits 1.2.0, Noise 2.5.0, Patina 1.6.0, Punch 1.6.0, Warp 1.4.0, Wax 1.9.0 with its finer WAVE page, Potential1200 1.0.2).
 
